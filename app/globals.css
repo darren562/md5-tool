@@ -40,6 +40,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.card.compact {
+  padding: 1.25rem;
+}
+
 .btn {
   background: #3b82f6;
   color: white;
@@ -58,6 +62,11 @@ body {
 
 .btn:active {
   transform: translateY(0);
+}
+
+.btn.btn-sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
 }
 
 .input {
@@ -85,6 +94,10 @@ body {
   transition: border-color 0.2s;
 }
 
+.textarea.compact {
+  min-height: 96px;
+}
+
 .textarea:focus {
   outline: none;
   border-color: #3b82f6;
@@ -107,6 +120,10 @@ body {
   text-align: center;
   transition: all 0.2s;
   cursor: pointer;
+}
+
+.file-upload.compact {
+  padding: 1rem;
 }
 
 .file-upload:hover {

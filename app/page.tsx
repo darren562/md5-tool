@@ -1,245 +1,201 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useMemo, useState } from "react";
 import CryptoJS from "crypto-js";
 
-export default function MD5Tool() {
-  const [activeTab, setActiveTab] = useState<"text" | "file">("text");
-  const [text, setText] = useState("");
-  const [result, setResult] = useState("");
-  const [fileName, setFileName] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+export default function Page() {
+  const [input, setInput] = useState("");
 
-  const calculateMD5 = (input: string) => {
-    return CryptoJS.MD5(input).toString();
-  };
+  const hash32Lower = useMemo(
+    () => (input ? CryptoJS.MD5(input).toString() : ""),
+    [input]
+  );
+  const hash32Upper = useMemo(
+    () => (hash32Lower ? hash32Lower.toUpperCase() : ""),
+    [hash32Lower]
+  );
+  const hash16Lower = useMemo(
+    () => (hash32Lower ? hash32Lower.slice(8, 24) : ""),
+    [hash32Lower]
+  );
+  const hash16Upper = useMemo(
+    () => (hash16Lower ? hash16Lower.toUpperCase() : ""),
+    [hash16Lower]
+  );
 
-  const handleTextSubmit = () => {
-    if (!text.trim()) {
-      alert("请输入要计算MD5的文本");
-      return;
-    }
-
-    setIsLoading(true);
-    setTimeout(() => {
-      const md5Hash = calculateMD5(text);
-      setResult(md5Hash);
-      setIsLoading(false);
-    }, 100);
-  };
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    setFileName(file.name);
-    setIsLoading(true);
-
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const content = e.target?.result as string;
-      const md5Hash = calculateMD5(content);
-      setResult(md5Hash);
-      setIsLoading(false);
-    };
-    reader.readAsText(file);
-  };
-
-  const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    if (file) {
-      setFileName(file.name);
-      setIsLoading(true);
-
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const content = e.target?.result as string;
-        const md5Hash = calculateMD5(content);
-        setResult(md5Hash);
-        setIsLoading(false);
-      };
-      reader.readAsText(file);
-    }
-  };
-
-  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(result);
-    alert("MD5值已复制到剪贴板");
-  };
-
-  const clearAll = () => {
-    setText("");
-    setResult("");
-    setFileName("");
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
+  const copy = async (text: string) => {
+    if (!text) return;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {}
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            MD5 哈希计算工具
-          </h1>
-          <p className="text-gray-600">快速计算文本或文件的MD5哈希值</p>
-        </div>
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-sky-100">
+      <div className="max-w-3xl mx-auto px-4 py-10 text-gray-900">
+        <div className="mb-2 text-sm text-gray-500">工具箱</div>
+        <h1 className="text-3xl font-bold mb-1 tracking-tight text-slate-800">
+          MD5 加密工具
+        </h1>
+        <p className="mb-6 text-slate-600">
+          数据全部本地计算，不会被上传到服务器
+        </p>
 
-        <div className="max-w-4xl mx-auto">
-          {/* 标签页 */}
-          <div className="flex border-b border-gray-200 mb-6">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-white p-4 md:p-5 shadow-sm">
+          <textarea
+            className="w-full min-h-[140px] resize-y rounded-lg border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            placeholder="在此输入文本以计算 MD5..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (
+                (e as React.KeyboardEvent<HTMLTextAreaElement>).metaKey &&
+                e.key === "Enter"
+              ) {
+                // Cmd+Enter 触发一次计算（本页为实时计算，按键用于习惯性确认）
+                setInput((prev) => prev);
+              }
+            }}
+          />
+          <div className="mt-2 flex items-center justify-between text-xs text-gray-500">
+            <span>字数：{input.length}</span>
+            <span className="hidden sm:inline">
+              提示：可按 ⌘+Enter 快速计算
+            </span>
+          </div>
+          <div className="mt-3 flex gap-2">
             <button
-              className={`tab ${activeTab === "text" ? "active" : ""}`}
-              onClick={() => setActiveTab("text")}
+              type="button"
+              className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50"
+              onClick={() => setInput(input)}
             >
-              文本输入
+              计算
             </button>
             <button
-              className={`tab ${activeTab === "file" ? "active" : ""}`}
-              onClick={() => setActiveTab("file")}
+              type="button"
+              className="inline-flex items-center rounded-md bg-slate-600 px-4 py-2 text-white hover:bg-slate-700 active:bg-slate-800 disabled:opacity-50"
+              onClick={() => setInput("")}
+              disabled={!input}
             >
-              文件上传
+              清空
             </button>
           </div>
+        </div>
 
-          {/* 文本输入模式 */}
-          {activeTab === "text" && (
-            <div className="card">
-              <h2 className="text-xl font-semibold mb-4">文本MD5计算</h2>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    输入文本
-                  </label>
-                  <textarea
-                    className="textarea"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                    placeholder="请输入要计算MD5的文本内容..."
-                  />
-                </div>
-                <div className="flex gap-4">
-                  <button
-                    className="btn"
-                    onClick={handleTextSubmit}
-                    disabled={isLoading}
-                  >
-                    {isLoading ? "计算中..." : "计算MD5"}
-                  </button>
-                  <button
-                    className="btn bg-gray-500 hover:bg-gray-600"
-                    onClick={clearAll}
-                  >
-                    清空
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* 文件上传模式 */}
-          {activeTab === "file" && (
-            <div className="card">
-              <h2 className="text-xl font-semibold mb-4">文件MD5计算</h2>
-              <div className="space-y-4">
-                <div
-                  className="file-upload"
-                  onDrop={handleDrop}
-                  onDragOver={handleDragOver}
-                  onClick={() => fileInputRef.current?.click()}
-                >
-                  <div className="text-gray-600">
-                    <svg
-                      className="mx-auto h-12 w-12 text-gray-400 mb-4"
-                      stroke="currentColor"
-                      fill="none"
-                      viewBox="0 0 48 48"
-                    >
-                      <path
-                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    <p className="text-lg">点击选择文件或拖拽文件到此处</p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      支持所有文本文件格式
-                    </p>
-                  </div>
-                </div>
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  className="hidden"
-                  onChange={handleFileChange}
-                  accept=".txt,.md,.json,.xml,.csv,.log,.html,.css,.js,.ts,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt"
-                />
-                {fileName && (
-                  <div className="text-sm text-gray-600">
-                    已选择文件: <span className="font-medium">{fileName}</span>
-                  </div>
-                )}
-                <button
-                  className="btn bg-gray-500 hover:bg-gray-600"
-                  onClick={clearAll}
-                >
-                  清空
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* 结果显示 */}
-          {result && (
-            <div className="card">
-              <h3 className="text-lg font-semibold mb-4">MD5 结果</h3>
-              <div className="result">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-gray-600">MD5 哈希值:</span>
-                  <button
-                    className="text-sm text-blue-600 hover:text-blue-800"
-                    onClick={copyToClipboard}
-                  >
-                    复制
-                  </button>
-                </div>
-                <div className="text-lg font-mono break-all">{result}</div>
-              </div>
-            </div>
-          )}
-
-          {/* 使用说明 */}
-          <div className="card bg-blue-50 border-blue-200">
-            <h3 className="text-lg font-semibold mb-4 text-blue-800">
-              使用说明
-            </h3>
-            <div className="text-blue-700 space-y-2">
-              <p>
-                • <strong>文本模式:</strong> 直接在文本框中输入要计算MD5的内容
-              </p>
-              <p>
-                • <strong>文件模式:</strong> 上传文件或拖拽文件到指定区域
-              </p>
-              <p>
-                • <strong>支持格式:</strong> 文本文件、代码文件、配置文件等
-              </p>
-              <p>
-                • <strong>安全性:</strong>{" "}
-                所有计算在浏览器本地完成，不会上传到服务器
-              </p>
+        <div className="mb-4 rounded-xl border border-indigo-100 bg-white p-4 md:p-5 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="font-semibold text-slate-800">MD5 结果</h2>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                className="inline-flex items-center rounded-md bg-slate-800 px-3 py-1.5 text-sm text-white hover:bg-slate-900 disabled:opacity-50"
+                onClick={() => {
+                  const lines = `32位小写: ${hash32Lower}\n32位大写: ${hash32Upper}\n16位小写: ${hash16Lower}\n16位大写: ${hash16Upper}`;
+                  copy(lines);
+                }}
+                disabled={!hash32Lower}
+              >
+                一键复制全部
+              </button>
+              <button
+                type="button"
+                className="inline-flex items-center rounded-md bg-slate-800 px-3 py-1.5 text-sm text-white hover:bg-slate-900 disabled:opacity-50"
+                onClick={() => {
+                  const json = {
+                    md5_32_lower: hash32Lower,
+                    md5_32_upper: hash32Upper,
+                    md5_16_lower: hash16Lower,
+                    md5_16_upper: hash16Upper,
+                  };
+                  copy(JSON.stringify(json, null, 2));
+                }}
+                disabled={!hash32Lower}
+              >
+                复制 JSON
+              </button>
             </div>
           </div>
+
+          <div className="space-y-3">
+            <Row label="32位小写:" value={hash32Lower} onCopy={copy} />
+            <Row label="32位大写:" value={hash32Upper} onCopy={copy} />
+            <Row label="16位小写:" value={hash16Lower} onCopy={copy} />
+            <Row label="16位大写:" value={hash16Upper} onCopy={copy} />
+          </div>
         </div>
+
+        <section className="mb-6">
+          <h2 className="font-semibold mb-2">MD5 在线加密-工具简介</h2>
+          <p className="text-gray-700">
+            MD5
+            在线加密工具，用于验证已有文件、文本的MD5哈希值是否与指定的MD5哈希值相同。工具可以通过网页形式进行在线使用，是一种快速、方便的
+            MD5 校验工具。所有数据全部本地计算，不会被上传到服务器。
+          </p>
+        </section>
+
+        <section className="mb-6">
+          <h2 className="font-semibold mb-2">MD5 算法介绍</h2>
+          <p className="text-gray-700">
+            MD5（Message+Digest+Algorithm+5）是一种常用的哈希算法，用于将任意长度的数据转化为固定长度的字符串。MD5算法广泛应用于数据加密、数字签名和密码存储等领域。它的输出通常为一个128位的哈希值，Hex编码后是32个字符。
+          </p>
+        </section>
+
+        <section className="mb-6">
+          <h2 className="font-semibold mb-2">MD5（16位）与MD5（32位）的区别</h2>
+          <p className="text-gray-700">
+            MD5（16位）和MD5（32位）的区别在于输出的字符串长度不同。MD5（32位）输出32个字符，而MD5（16位）输出16个字符。MD5（16位）是通过截取MD5（32位）中第9～24位而得到的。
+          </p>
+        </section>
+
+        <section className="mb-6">
+          <h2 className="font-semibold mb-2">MD5的应用</h2>
+          <ul className="list-decimal pl-6 text-gray-700 space-y-1">
+            <li>
+              数据加密：可以将敏感信息进⾏ MD5 加密，避免明⽂存储的安全问题。
+            </li>
+            <li>⽂件校验：可以通过计算⽂件的 MD5，判断⽂件内容是否被篡改。</li>
+            <li>
+              防⽌重复提交：可以将⽤户输⼊的数据进⾏ MD5 计算，并与之前保存的
+              MD5 值进⾏⽐对，以避免重复提交。
+            </li>
+            <li>
+              数字签名：MD5
+              算法可以⽤于⽣成数字签名，验证数据的完整性和不可抵赖性。
+            </li>
+          </ul>
+        </section>
+
+        <footer className="mt-10 text-sm text-gray-500">
+          首页 - 备案号： 京ICP备2023025512号-1 京公网安备11010502053694
+        </footer>
       </div>
-    </div>
+    </main>
   );
 }
 
+function Row({
+  label,
+  value,
+  onCopy,
+}: {
+  label: string;
+  value: string;
+  onCopy: (text: string) => void;
+}) {
+  return (
+    <div className="flex items-center gap-3">
+      <div className="w-28 shrink-0">{label}</div>
+      <div className="flex-1 min-h-[2.25rem] border rounded px-3 py-2 bg-white font-mono break-all">
+        {value}
+      </div>
+      <button
+        type="button"
+        className="rounded bg-gray-600 px-3 py-2 text-white hover:bg-gray-700 active:bg-gray-800 disabled:opacity-50"
+        onClick={() => onCopy(value)}
+        disabled={!value}
+      >
+        复制
+      </button>
+    </div>
+  );
+}
