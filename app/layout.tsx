@@ -29,7 +29,7 @@ export default function RootLayout({
           content="Online MD5 hash calculator supporting text and file MD5 calculation."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:url" content="https://www.hashkitly.com" />
         <meta property="og:image" content="/favicon.ico" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="MD5 Tool" />
