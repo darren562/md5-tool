@@ -1,0 +1,133 @@
+/* 全屏浅色布局 */
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  background: #f2f7ff;
+  color: #334155;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.box {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(70, 100, 150, 0.12);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 25px;
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: #1e40af;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fafbfc;
+  color: #1e293b;
+  outline: none;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  border-color: #38bdf8;
+}
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #38bdf8;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+}
+
+/* 结果区域 */
+.result {
+  margin-top: 25px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.row span:first-child {
+  font-weight: 600;
+  margin-right: 10px;
+  white-space: nowrap;
+  color: #475569;
+}
+
+.hash {
+  flex: 1;
+  word-break: break-all;
+  font-family: monospace;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.copy {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  background: #10b981;
+  color: #fff;
+  cursor: pointer;
+}
+
+.copy:hover {
+  background: #059669;
+}
+
+.copy.ok {
+  background: #84cc16;
+}
+
+/* 新增：MD5 介绍区 */
+.intro {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #475569;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.intro h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #1e40af;
+}
+
+
