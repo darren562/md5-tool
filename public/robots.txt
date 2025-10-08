@@ -1,3 +1,4 @@
 User-agent: *
+Disallow: /_next/static/
 Allow: /
 Sitemap: https://www.hashkitly.com/sitemap.xml
