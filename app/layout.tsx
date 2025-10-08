@@ -41,7 +41,20 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <title>MD5 Tool</title>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <footer
+          style={{
+            textAlign: "center",
+            marginTop: "32px",
+            paddingBottom: "50px",
+            color: "#888",
+            fontSize: "14px",
+          }}
+        >
+          Copyright © 2025 Hashkitly
+        </footer>
+      </body>
     </html>
   );
 }
