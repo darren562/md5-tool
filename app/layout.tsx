@@ -38,7 +38,7 @@ export default function RootLayout({
           content="Online MD5 hash calculator supporting text and file MD5 calculation."
         />
         <meta name="twitter:image" content="/favicon.ico" />
-        <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <title>MD5 Tool</title>
       </head>
       <body className={inter.className}>
