@@ -1,4 +1,3 @@
-
 # MD5 Tool
 
 An online MD5 hash calculator built with Next.js, supporting both text and file MD5 calculation.

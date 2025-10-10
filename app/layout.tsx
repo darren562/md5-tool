@@ -6,9 +6,9 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MD5 Tool",
+  title: "Online MD5 Hash Generator & Text Encryption Tool | Free & Secure",
   description:
-    "Online MD5 hash calculator supporting text and file MD5 calculation.",
+    "Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
 };
 
 export default function RootLayout({
@@ -22,25 +22,59 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="MD5, hash, online, encryption, checksum, file, text, tool"
+          content="MD5 hash, text encryption, online MD5 generator, md5 calculator, password hash, string encryption, md5 online, md5 converter, secure hash"
         />
-        <meta property="og:title" content="MD5 Tool" />
+        <meta
+          property="og:title"
+          content="Online MD5 Hash Generator & Text Encryption Tool | Free & Secure"
+        />
         <meta
           property="og:description"
-          content="Online MD5 hash calculator supporting text and file MD5 calculation."
+          content="Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.hashkitly.com" />
         <meta property="og:image" content="/favicon.ico" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="MD5 Tool" />
+        <meta
+          name="twitter:title"
+          content="Online MD5 Hash Generator & Text Encryption Tool | Free & Secure"
+        />
         <meta
           name="twitter:description"
-          content="Online MD5 hash calculator supporting text and file MD5 calculation."
+          content="Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification."
         />
         <meta name="twitter:image" content="/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <title>MD5 Tool</title>
+        <link rel="canonical" href="https://www.hashkitly.com/" />
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Online MD5 Text Hash Generator",
+              url: "https://www.hashkitly.com/",
+              description:
+                "Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
+              inLanguage: "en",
+              applicationCategory: "SecurityApplication",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://www.hashkitly.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+              keywords:
+                "MD5 hash, text encryption, online MD5 generator, password hash, string encryption",
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Script
