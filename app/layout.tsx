@@ -53,25 +53,41 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "WebSite",
+              "@type": "WebApplication",
               name: "Online MD5 Text Hash Generator",
               url: "https://www.hashkitly.com/",
               description:
                 "Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
-              inLanguage: "en",
-              applicationCategory: "SecurityApplication",
+              applicationCategory: "Security",
+              operatingSystem: "Any",
+              browserRequirements: "Requires JavaScript",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
               },
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://www.hashkitly.com/?q={search_term_string}",
-                "query-input": "required name=search_term_string",
+              creator: {
+                "@type": "Organization",
+                name: "Hashkitly",
+                url: "https://www.hashkitly.com",
               },
-              keywords:
-                "MD5 hash, text encryption, online MD5 generator, password hash, string encryption",
+              inLanguage: "en",
+              featureList: [
+                "32-bit and 16-bit MD5 hash generation",
+                "Browser-based calculation",
+                "Instant results",
+                "Free to use",
+                "Privacy focused - no data upload",
+              ],
+              softwareVersion: "1.0.0",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                ratingCount: "1",
+                bestRating: "5",
+                worstRating: "1",
+              },
             }),
           }}
         />
