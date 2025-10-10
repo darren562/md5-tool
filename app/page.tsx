@@ -17,7 +17,7 @@ export default function Home() {
     console.log("Input text:", text);
 
     if (!text) {
-      alert("Please enter content");
+      alert("Please enter content to encrypt");
       return;
     }
 
@@ -63,8 +63,8 @@ export default function Home() {
           onChange={(e) => setInputText(e.target.value)}
         />
         <div className="tip">
-          This tool only calculates locally in your browser. No content will be
-          uploaded. Safe to use.
+          This tool calculates MD5 hashes locally in your browser. Your content
+          will never be uploaded. 100% secure and private.
         </div>
         <button className="btn" onClick={handleEncrypt}>
           Encrypt
@@ -132,15 +132,15 @@ export default function Home() {
           <h2>What is MD5?</h2>
           <p>
             MD5 (Message-Digest Algorithm 5), proposed by Ronald Rivest in 1991,
-            maps data of any length to a 128-bit binary, usually represented by
-            32 hexadecimal characters. It has an avalanche effect: even if only
-            1 bit of the original text is changed, the output will be completely
-            different. MD5 was widely used for file integrity checks, digital
-            signatures, and password storage. However, with increased computing
-            power, MD5 collisions have been successfully constructed, making it
-            unsuitable for high-security scenarios. It is still widely used for
-            ordinary checks, deduplication, cache keys, and other low-security
-            needs.
+            maps data of any length to a 128-bit binary value, usually
+            represented by 32 hexadecimal characters. It has an avalanche
+            effect: even if only one bit of the original text is changed, the
+            output will be completely different. MD5 was widely used for file
+            integrity checks, digital signatures, and password storage. However,
+            with increased computing power, MD5 collisions have been
+            successfully constructed, making it unsuitable for high-security
+            scenarios. It is still widely used for ordinary checks,
+            deduplication, cache keys, and other low-security needs.
           </p>
           <h2>MD5 Features</h2>
           <p>
