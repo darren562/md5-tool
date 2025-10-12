@@ -43,7 +43,8 @@ export default function Sha256Page() {
           onChange={(e) => setInputText(e.target.value)}
         />
         <div className="tip">
-          This tool calculates SHA256 hashes locally in your browser. Your content will never be uploaded. 100% secure and private.
+          This tool calculates SHA256 hashes locally in your browser. Your
+          content will never be uploaded. 100% secure and private.
         </div>
         <button className="btn" onClick={handleEncrypt}>
           Encrypt
@@ -68,21 +69,29 @@ export default function Sha256Page() {
         <div className="intro">
           <h2>What is SHA256?</h2>
           <p>
-            SHA256 (Secure Hash Algorithm 256) is a cryptographic hash function that generates a 256-bit (32-byte) hash value. It is widely used for data integrity verification, password hashing, and digital signatures. SHA256 is part of the SHA-2 family and is considered highly secure for most modern applications.
+            SHA256 (Secure Hash Algorithm 256) is a cryptographic hash function
+            that generates a 256-bit (32-byte) hash value. It is widely used for
+            data integrity verification, password hashing, and digital
+            signatures. SHA256 is part of the SHA-2 family and is considered
+            highly secure for most modern applications.
           </p>
           <h2>SHA256 Features</h2>
           <p>
-            - Fixed 256-bit output<br />
-            - Irreversible one-way function<br />
-            - High avalanche effect<br />
-            - Strong collision resistance
+            - Fixed 256-bit output
+            <br />
+            - Irreversible one-way function
+            <br />
+            - High avalanche effect
+            <br />- Strong collision resistance
           </p>
           <h2>Application Scenarios</h2>
           <p>
-            - Password storage and verification<br />
-            - File integrity checking<br />
-            - Blockchain and cryptocurrency security<br />
-            - Digital signatures
+            - Password storage and verification
+            <br />
+            - File integrity checking
+            <br />
+            - Blockchain and cryptocurrency security
+            <br />- Digital signatures
           </p>
         </div>
       </div>

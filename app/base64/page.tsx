@@ -57,9 +57,10 @@ export default function Base64Page() {
           onChange={(e) => setInputText(e.target.value)}
         />
         <div className="tip">
-          This tool encodes and decodes Base64 locally in your browser. Your content will never be uploaded. 100% secure and private.
+          This tool encodes and decodes Base64 locally in your browser. Your
+          content will never be uploaded. 100% secure and private.
         </div>
-        <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
+        <div style={{ display: "flex", gap: 8, margin: "12px 0" }}>
           <button className="btn" onClick={handleEncode}>
             Encode
           </button>
@@ -104,19 +105,24 @@ export default function Base64Page() {
         <div className="intro">
           <h2>What is Base64?</h2>
           <p>
-            Base64 is an encoding scheme that converts binary data into ASCII text. It is commonly used to encode data for transmission over media that are designed to deal with textual data, ensuring that the data remains intact without modification during transport.
+            Base64 is an encoding scheme that converts binary data into ASCII
+            text. It is commonly used to encode data for transmission over media
+            that are designed to deal with textual data, ensuring that the data
+            remains intact without modification during transport.
           </p>
           <h2>Base64 Features</h2>
           <p>
-            - Converts any text or binary data to ASCII<br />
-            - Safe for URLs, emails, and web forms<br />
-            - Widely used in data serialization and transfer
+            - Converts any text or binary data to ASCII
+            <br />
+            - Safe for URLs, emails, and web forms
+            <br />- Widely used in data serialization and transfer
           </p>
           <h2>Application Scenarios</h2>
           <p>
-            - Embedding images in HTML/CSS<br />
-            - Data transfer in APIs<br />
-            - Email attachments encoding
+            - Embedding images in HTML/CSS
+            <br />
+            - Data transfer in APIs
+            <br />- Email attachments encoding
           </p>
         </div>
       </div>
