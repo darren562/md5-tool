@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.hashkitly.com/",
     siteName: "Hashkitly",
+    locale: "en_US",
     images: ["https://www.hashkitly.com/favicon.ico"],
   },
   twitter: {
@@ -57,6 +58,78 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-ZNY75458QL');
           `}
+        </Script>
+        <Script
+          id="ld-webapp"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: "Online MD5 Hash Generator",
+            applicationCategory: "UtilitiesApplication",
+            operatingSystem: "Web",
+            url: "https://www.hashkitly.com/",
+            offers: { "@type": "Offer", price: 0, priceCurrency: "USD" },
+          })}
+        </Script>
+        <Script
+          id="ld-org"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Hashkitly",
+            url: "https://www.hashkitly.com/",
+            logo: "https://www.hashkitly.com/favicon.ico",
+          })}
+        </Script>
+        <Script
+          id="ld-website"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Hashkitly",
+            url: "https://www.hashkitly.com/",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://www.hashkitly.com/?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          })}
+        </Script>
+        <Script
+          id="ld-sitenav"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: [
+              {
+                "@type": "SiteNavigationElement",
+                name: "MD5",
+                url: "https://www.hashkitly.com/",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base64",
+                url: "https://www.hashkitly.com/base64",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "SHA256",
+                url: "https://www.hashkitly.com/sha256",
+              },
+            ],
+          })}
         </Script>
         {children}
         <footer
