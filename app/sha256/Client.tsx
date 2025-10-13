@@ -10,7 +10,7 @@ export default function Sha256Client() {
   const handleEncrypt = () => {
     const text = inputText.trim();
     if (!text) {
-      alert("Please enter content to encrypt");
+      alert("Please enter text to hash");
       return;
     }
     const hash = CryptoJS.SHA256(text).toString();
@@ -35,24 +35,24 @@ export default function Sha256Client() {
   return (
     <div className="container">
       <div className="box">
-        <h1>SHA256 Online Encryption</h1>
+        <h1>SHA256 Hash Generator</h1>
         <textarea
           id="txt"
-          placeholder="Please enter the text to encrypt..."
+          placeholder="Enter text to hash..."
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
         <div className="tip">
-          This tool calculates SHA256 hashes locally in your browser. Your
-          content will never be uploaded. 100% secure and private.
+          This tool runs entirely in your browser. Your content is never
+          uploaded—100% private and secure.
         </div>
         <button className="btn" onClick={handleEncrypt}>
-          Encrypt
+          Generate Hash
         </button>
         {result && (
           <div id="res" className="result">
             <div className="row">
-              <span>SHA256 Hash:</span>
+              <span>SHA256 digest:</span>
               <span id="sha256" className="hash">
                 {result}
               </span>

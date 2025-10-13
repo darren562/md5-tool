@@ -10,7 +10,7 @@ export default function Base64Client() {
   const handleEncode = () => {
     const text = inputText.trim();
     if (!text) {
-      alert("Please enter content to encode");
+      alert("Please enter text to encode");
       return;
     }
     setResult(btoa(unescape(encodeURIComponent(text))));
@@ -20,7 +20,7 @@ export default function Base64Client() {
   const handleDecode = () => {
     const text = inputText.trim();
     if (!text) {
-      alert("Please enter Base64 content to decode");
+      alert("Please enter Base64 text to decode");
       return;
     }
     try {
@@ -49,16 +49,16 @@ export default function Base64Client() {
   return (
     <div className="container">
       <div className="box">
-        <h1>Base64 Encode & Decode Online</h1>
+        <h1>Base64 Encoder & Decoder</h1>
         <textarea
           id="txt"
-          placeholder="Enter text or Base64 to encode/decode..."
+          placeholder="Enter text (or Base64) to encode or decode..."
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
         <div className="tip">
-          This tool encodes and decodes Base64 locally in your browser. Your
-          content will never be uploaded. 100% secure and private.
+          This tool runs entirely in your browser. Your content is never
+          uploaded—100% private and secure.
         </div>
         <div style={{ display: "flex", gap: 8, margin: "12px 0" }}>
           <button className="btn" onClick={handleEncode}>
@@ -71,7 +71,7 @@ export default function Base64Client() {
         {result && (
           <div id="res" className="result">
             <div className="row">
-              <span>Base64 Encoded:</span>
+              <span>Encoded (Base64):</span>
               <span id="base64-enc" className="hash">
                 {result}
               </span>
@@ -88,7 +88,7 @@ export default function Base64Client() {
         {decodeResult && (
           <div id="res" className="result">
             <div className="row">
-              <span>Base64 Decoded:</span>
+              <span>Decoded (text):</span>
               <span id="base64-dec" className="hash">
                 {decodeResult}
               </span>
@@ -112,7 +112,7 @@ export default function Base64Client() {
           </p>
           <h2>Base64 Features</h2>
           <p>
-            - Converts any text or binary data to ASCII
+            - Converts text or binary data to ASCII
             <br />
             - Safe for URLs, emails, and web forms
             <br />- Widely used in data serialization and transfer

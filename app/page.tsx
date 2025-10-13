@@ -17,7 +17,7 @@ export default function Home() {
     console.log("Input text:", text);
 
     if (!text) {
-      alert("Please enter content to encrypt");
+      alert("Please enter text to hash");
       return;
     }
 
@@ -55,25 +55,25 @@ export default function Home() {
   return (
     <div className="container">
       <div className="box">
-        <h1>MD5 Online Encryption</h1>
+        <h1>MD5 Hash Generator</h1>
         <textarea
           id="txt"
-          placeholder="Please enter the text to encrypt..."
+          placeholder="Enter text to hash..."
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
         <div className="tip">
-          This tool calculates MD5 hashes locally in your browser. Your content
-          will never be uploaded. 100% secure and private.
+          This tool runs entirely in your browser. Your content is never
+          uploaded—100% private and secure.
         </div>
         <button className="btn" onClick={handleEncrypt}>
-          Encrypt
+          Generate Hash
         </button>
 
         {results && (
           <div id="res" className="result">
             <div className="row">
-              <span>32-bit Lowercase:</span>
+              <span>32-character (lowercase):</span>
               <span id="l32" className="hash">
                 {results.l32}
               </span>
@@ -86,7 +86,7 @@ export default function Home() {
               </button>
             </div>
             <div className="row">
-              <span>32-bit Uppercase:</span>
+              <span>32-character (uppercase):</span>
               <span id="u32" className="hash">
                 {results.u32}
               </span>
@@ -99,7 +99,7 @@ export default function Home() {
               </button>
             </div>
             <div className="row">
-              <span>16-bit Lowercase:</span>
+              <span>16-character (lowercase):</span>
               <span id="l16" className="hash">
                 {results.l16}
               </span>
@@ -112,7 +112,7 @@ export default function Home() {
               </button>
             </div>
             <div className="row">
-              <span>16-bit Uppercase:</span>
+              <span>16-character (uppercase):</span>
               <span id="u16" className="hash">
                 {results.u16}
               </span>
@@ -180,15 +180,15 @@ export default function Home() {
             achieving instant transfer.
             <br></br>
           </p>
-          <h2>MD5 Encryption Principle</h2>
+          <h2>How MD5 Works</h2>
           <p>
-            Data padding: The input data is padded so that its length becomes N
-            * 512 + 448 bits, then 64 bits are added to record the original data
+            Data padding: The input is padded so its length becomes N × 512 +
+            448 bits, then a 64‑bit field is appended to record the original
             length.
             <br></br>
-            Standard magic number calculation: Four standard magic numbers (A,
-            B, C, D) are used for multiple rounds of hash calculation, finally
-            generating a 128-bit MD5 value.
+            Initialization and rounds: Four 32‑bit state variables (A, B, C, D)
+            are initialized and updated across multiple rounds to produce a
+            128‑bit MD5 digest.
           </p>
         </div>
       </div>
