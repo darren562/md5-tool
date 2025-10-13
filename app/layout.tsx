@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import NavBar from "./components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.hashkitly.com"),
   title: "Online MD5 Hash Generator & Text Encryption Tool | Free & Secure",
   description:
     "Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
@@ -43,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NavBar />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZNY75458QL"
           strategy="afterInteractive"
