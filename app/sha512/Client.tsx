@@ -69,7 +69,7 @@ export default function Sha512Client() {
             </div>
           </div>
         )}
-  <div className="intro">
+        <div className="intro">
           <h2>What is SHA‑512?</h2>
           <p>
             SHA‑512 (SHA‑2 family) outputs a 512‑bit digest. Its larger internal

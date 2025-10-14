@@ -105,7 +105,7 @@ export default function Base64Client() {
             </div>
           </div>
         )}
-  <div className="intro">
+        <div className="intro">
           <h2>What is Base64?</h2>
           <p>
             Base64 is an encoding scheme that converts binary data into ASCII

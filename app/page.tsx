@@ -130,8 +130,8 @@ export default function Home() {
           </div>
         )}
 
-  {/* MD5 Introduction */}
-  <div className="intro">
+        {/* MD5 Introduction */}
+        <div className="intro">
           <h2>What is MD5?</h2>
           <p>
             MD5 (Message-Digest Algorithm 5), proposed by Ronald Rivest in 1991,

@@ -69,7 +69,7 @@ export default function Sha1Client() {
             </div>
           </div>
         )}
-  <div className="intro">
+        <div className="intro">
           <h2>What is SHA‑1?</h2>
           <p>
             SHA‑1 (Secure Hash Algorithm 1) outputs a 160‑bit digest. It was
