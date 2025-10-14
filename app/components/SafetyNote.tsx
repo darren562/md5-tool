@@ -12,10 +12,26 @@ const MESSAGES: Record<string, string> = {
   aes: "Demo only: simplified passphrase -> key; real apps need salt + IV + AES-GCM.",
 };
 
-export function SafetyNote({ kind }: { kind: keyof typeof MESSAGES }) {
+type Variant = "info" | "warn";
+
+export function SafetyNote({
+  kind,
+  variant = "info",
+}: {
+  kind: keyof typeof MESSAGES;
+  variant?: Variant;
+}) {
+  const icon = variant === "warn" ? "⚠️" : "💡";
   return (
-    <div className="tip" style={{ marginTop: 4 }}>
-      {MESSAGES[kind]}
+    <div
+      className={`safety-note safety-note--${variant}`}
+      role="note"
+      aria-label="security note"
+    >
+      <span className="safety-note__icon" aria-hidden>
+        {icon}
+      </span>
+      <span className="safety-note__text">{MESSAGES[kind]}</span>
     </div>
   );
 }
