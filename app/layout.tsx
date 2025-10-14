@@ -128,6 +128,21 @@ export default function RootLayout({
                 name: "SHA256",
                 url: "https://www.hashkitly.com/sha256",
               },
+              {
+                "@type": "SiteNavigationElement",
+                name: "SHA-1",
+                url: "https://www.hashkitly.com/sha1",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "SHA-512",
+                url: "https://www.hashkitly.com/sha512",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "AES",
+                url: "https://www.hashkitly.com/aes",
+              },
             ],
           })}
         </Script>

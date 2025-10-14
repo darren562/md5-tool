@@ -18,4 +18,22 @@
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
   </url>
+  <url>
+  <loc>https://www.hashkitly.com/sha1</loc>
+  <lastmod>2025-10-14</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.75</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/sha512</loc>
+  <lastmod>2025-10-14</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.75</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/aes</loc>
+  <lastmod>2025-10-14</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+  </url>
 </urlset>
