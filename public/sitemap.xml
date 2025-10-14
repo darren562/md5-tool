@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
   <loc>https://www.hashkitly.com/</loc>
-  <lastmod>2025-10-14</lastmod>
+  <lastmod>2025-10-15</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/base64</loc>
-  <lastmod>2025-10-14</lastmod>
+  <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/sha256</loc>
-  <lastmod>2025-10-14</lastmod>
+  <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/sha1</loc>
-  <lastmod>2025-10-14</lastmod>
+  <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.75</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/sha512</loc>
-  <lastmod>2025-10-14</lastmod>
+  <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.75</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/aes</loc>
-  <lastmod>2025-10-14</lastmod>
+  <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/privacy</loc>
-  <lastmod>2025-10-14</lastmod>
-  <changefreq>monthly</changefreq>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.4</priority>
   </url>
 </urlset>
