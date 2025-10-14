@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     url: "https://www.hashkitly.com/",
     siteName: "Hashkitly",
     locale: "en_US",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
   twitter: {
     card: "summary",
     title: "Online MD5 Hash Generator & Text Encryption Tool | Free & Secure",
     description:
       "Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
   alternates: {
     canonical: "https://www.hashkitly.com/",

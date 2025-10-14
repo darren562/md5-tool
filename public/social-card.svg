@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
-  <rect width="1200" height="630" fill="#0f172a"/>
-  <rect x="40" y="40" width="1120" height="550" rx="28" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-  <text x="120" y="210" fill="#38bdf8" font-family="'Segoe UI',Arial,sans-serif" font-size="70" font-weight="600">Hashkitly</text>
-  <text x="120" y="300" fill="#f1f5f9" font-family="'Segoe UI',Arial,sans-serif" font-size="40" font-weight="500">Browser‑Only Hash & Encoding Tools</text>
-  <text x="120" y="380" fill="#94a3b8" font-family="'Segoe UI',Arial,sans-serif" font-size="30">MD5 • SHA‑1 • SHA‑256 • SHA‑512 • Base64 • AES</text>
-  <text x="120" y="460" fill="#38bdf8" font-family="'Segoe UI',Arial,sans-serif" font-size="28">100% Local · No Upload · Instant</text>
-</svg>

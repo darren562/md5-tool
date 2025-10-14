@@ -16,14 +16,14 @@ export const metadata: Metadata = {
       "Free online Base64 encoder and decoder for text. Instantly encode or decode Base64 in your browser with no data upload. Safe, private, and easy to use.",
     type: "website",
     url: "https://www.hashkitly.com/base64",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
   twitter: {
     card: "summary",
     title: "Base64 Encode & Decode Online | Free & Secure Converter",
     description:
       "Free online Base64 encoder and decoder for text. Instantly encode or decode Base64 in your browser with no data upload. Safe, private, and easy to use.",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
   alternates: {
     canonical: "https://www.hashkitly.com/base64",

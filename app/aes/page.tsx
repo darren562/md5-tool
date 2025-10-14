@@ -14,14 +14,14 @@ export const metadata: Metadata = {
       "Free AES text encryption and decryption tool. Encrypt or decrypt text in your browser using a passphrase.",
     type: "website",
     url: "https://www.hashkitly.com/aes",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
   twitter: {
     card: "summary",
     title: "AES Text Encrypt & Decrypt Online | Browser Only",
     description:
       "Free AES text encryption and decryption tool. Encrypt or decrypt text in your browser using a passphrase.",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
   alternates: { canonical: "https://www.hashkitly.com/aes" },
 };

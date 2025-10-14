@@ -11,14 +11,14 @@ export const metadata: Metadata = {
       "All hashing, encoding and AES operations run 100% locally in your browser. No persistence. No uploads.",
     type: "website",
     url: "https://www.hashkitly.com/privacy",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
   twitter: {
     card: "summary",
     title: "Privacy & Data Handling | Hashkitly",
     description:
       "All hashing, encoding and AES operations run 100% locally in your browser. No persistence. No uploads.",
-    images: ["https://www.hashkitly.com/social-card.svg"],
+    images: ["https://www.hashkitly.com/favicon.ico"],
   },
 };
 
