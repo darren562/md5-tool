@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import CryptoJS from "crypto-js";
+import ToolLinks from "../components/ToolLinks";
+import { SafetyNote } from "../components/SafetyNote";
 
 export default function Sha256Client() {
   const [inputText, setInputText] = useState("");
@@ -36,6 +38,7 @@ export default function Sha256Client() {
     <div className="container">
       <div className="box">
         <h1>SHA256 Hash Generator</h1>
+        <SafetyNote kind="sha256" />
         <textarea
           id="txt"
           placeholder="Enter text to hash..."
@@ -66,7 +69,7 @@ export default function Sha256Client() {
             </div>
           </div>
         )}
-        <div className="intro">
+  <div className="intro">
           <h2>What is SHA256?</h2>
           <p>
             SHA256 (Secure Hash Algorithm 256) is a cryptographic hash function
@@ -86,15 +89,21 @@ export default function Sha256Client() {
           </p>
           <h2>Application Scenarios</h2>
           <p>
-            - Password storage and verification
-            <br />
-            - File integrity checking
-            <br />
-            - Blockchain and cryptocurrency security
-            <br />- Digital signatures
+            - File integrity checks
+            <br />- Digital signatures (with proper schemes)
+            <br />- Blockchain / Merkle tree hashing
+            <br />- API request signing / content addressing
+          </p>
+          <h2>Security Notes</h2>
+          <p>
+            SHA256 is intentionally fast. For passwords or secrets, wrap inside
+            a slow KDF (bcrypt, scrypt, Argon2, PBKDF2) with a unique per-password
+            salt and adequate cost. Avoid rolling your own constructions (e.g.
+            manual salting + single SHA256) as they remain GPU/ASIC friendly.
           </p>
         </div>
       </div>
+      <ToolLinks />
     </div>
   );
 }

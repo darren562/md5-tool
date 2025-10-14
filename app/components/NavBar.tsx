@@ -42,6 +42,9 @@ export default function NavBar() {
           <Link href="/aes" className={isActive("/aes")}>
             AES
           </Link>
+          <Link href="/privacy" className={isActive("/privacy")}>
+            Privacy
+          </Link>
         </div>
       </div>
     </nav>

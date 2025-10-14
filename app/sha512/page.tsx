@@ -14,14 +14,14 @@ export const metadata: Metadata = {
       "Free online SHA-512 hash generator for text. Instant SHA-512 calculation in your browser with no data upload.",
     type: "website",
     url: "https://www.hashkitly.com/sha512",
-    images: ["https://www.hashkitly.com/favicon.ico"],
+    images: ["https://www.hashkitly.com/social-card.svg"],
   },
   twitter: {
     card: "summary",
     title: "SHA-512 Online Hash Generator | Free & Secure",
     description:
       "Free online SHA-512 hash generator for text. Instant SHA-512 calculation in your browser with no data upload.",
-    images: ["https://www.hashkitly.com/favicon.ico"],
+    images: ["https://www.hashkitly.com/social-card.svg"],
   },
   alternates: { canonical: "https://www.hashkitly.com/sha512" },
 };

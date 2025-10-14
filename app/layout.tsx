@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     url: "https://www.hashkitly.com/",
     siteName: "Hashkitly",
     locale: "en_US",
-    images: ["https://www.hashkitly.com/favicon.ico"],
+    images: ["https://www.hashkitly.com/social-card.svg"],
   },
   twitter: {
     card: "summary",
     title: "Online MD5 Hash Generator & Text Encryption Tool | Free & Secure",
     description:
       "Free online MD5 hash generator for text encryption. Instant MD5 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
-    images: ["https://www.hashkitly.com/favicon.ico"],
+    images: ["https://www.hashkitly.com/social-card.svg"],
   },
   alternates: {
     canonical: "https://www.hashkitly.com/",
@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
         <NavBar />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZNY75458QL"
@@ -142,6 +142,11 @@ export default function RootLayout({
                 "@type": "SiteNavigationElement",
                 name: "AES",
                 url: "https://www.hashkitly.com/aes",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Privacy",
+                url: "https://www.hashkitly.com/privacy",
               },
             ],
           })}

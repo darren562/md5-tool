@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import CryptoJS from "crypto-js";
+import ToolLinks from "./components/ToolLinks";
+import { SafetyNote } from "./components/SafetyNote";
 
 export default function Home() {
   const [inputText, setInputText] = useState("");
@@ -56,6 +58,7 @@ export default function Home() {
     <div className="container">
       <div className="box">
         <h1>MD5 Hash Generator</h1>
+        <SafetyNote kind="md5" />
         <textarea
           id="txt"
           placeholder="Enter text to hash..."
@@ -127,8 +130,8 @@ export default function Home() {
           </div>
         )}
 
-        {/* MD5 Introduction */}
-        <div className="intro">
+  {/* MD5 Introduction */}
+  <div className="intro">
           <h2>What is MD5?</h2>
           <p>
             MD5 (Message-Digest Algorithm 5), proposed by Ronald Rivest in 1991,
@@ -161,24 +164,20 @@ export default function Home() {
           </p>
           <h2>MD5 Application Scenarios</h2>
           <p>
-            User password protection: When storing user passwords in a database,
-            usually the MD5 value of the password is stored instead of the plain
-            text. When users log in, the system encrypts the entered password
-            with MD5 and compares it with the MD5 value in the database.
-            <br></br>
-            File transfer integrity check: During file transfer, MD5 can be used
-            to check the integrity of files to ensure they have not been
-            tampered with.
-            <br></br>
-            Digital signature: When publishing software, the MD5 value of the
-            software can be published at the same time. After downloading, users
-            can check the MD5 to ensure file integrity.
-            <br></br>
-            Cloud disk instant transfer: When uploading large files to the cloud
-            disk, the system first calculates the MD5 value. If the server
-            already has the same MD5 value, the existing file is used directly,
-            achieving instant transfer.
-            <br></br>
+            Common Uses:
+            <br />- File integrity / checksum comparison
+            <br />- Deduplication & cache keys
+            <br />- Legacy systems expecting MD5
+            <br />- Non-security fingerprinting of content
+          </p>
+          <h2>Security Notes</h2>
+          <p>
+            MD5 is intentionally fast; this makes brute force and rainbow table
+            attacks practical on weak inputs. For passwords use bcrypt, scrypt,
+            Argon2, or PBKDF2 with a unique salt and adequate cost factors. For
+            collision resistance and digital signatures use modern hashes like
+            SHA-256/512. Use MD5 only where accidental (not malicious) changes
+            need detection and the risk profile is low.
           </p>
           <h2>How MD5 Works</h2>
           <p>
@@ -192,6 +191,7 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <ToolLinks />
     </div>
   );
 }

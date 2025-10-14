@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import CryptoJS from "crypto-js";
+import ToolLinks from "../components/ToolLinks";
+import { SafetyNote } from "../components/SafetyNote";
 
 export default function AesClient() {
   const [inputText, setInputText] = useState("");
@@ -68,6 +70,7 @@ export default function AesClient() {
     <div className="container">
       <div className="box">
         <h1>AES Text Encrypt / Decrypt</h1>
+        <SafetyNote kind="aes" />
         <textarea
           id="txt"
           placeholder="Enter plaintext or ciphertext..."
@@ -137,13 +140,22 @@ export default function AesClient() {
           <h2>About AES</h2>
           <p>
             AES (Advanced Encryption Standard) is a symmetric block cipher
-            widely used worldwide. This demo uses a simplified passphrase
-            interface (CryptoJS) producing ciphertext in Base64. For production
-            use, apply random IVs, key derivation (PBKDF2/Argon2), and
-            authenticated modes (GCM / CCM) to ensure integrity.
+            standardized by NIST (FIPS-197). It operates on 128-bit blocks with
+            128/192/256-bit keys. Security depends on correct mode, randomness,
+            and key management—not just the algorithm name.
+          </p>
+          <h2>Security Notes</h2>
+          <p>
+            This demo uses a simplified passphrase shortcut (CryptoJS) without
+            explicit salt, IV control, or authenticated encryption. For real
+            applications use: a strong passphrase → KDF (Argon2 / PBKDF2) → key
+            bytes; random per-message IV; authenticated mode (AES-GCM) to detect
+            tampering; store salt + IV with ciphertext. Never reuse IVs; avoid
+            ECB; do not roll your own crypto primitives.
           </p>
         </div>
       </div>
+      <ToolLinks />
     </div>
   );
 }

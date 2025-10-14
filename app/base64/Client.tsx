@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import ToolLinks from "../components/ToolLinks";
+import { SafetyNote } from "../components/SafetyNote";
 
 export default function Base64Client() {
   const [inputText, setInputText] = useState("");
@@ -50,6 +52,7 @@ export default function Base64Client() {
     <div className="container">
       <div className="box">
         <h1>Base64 Encoder & Decoder</h1>
+        <SafetyNote kind="base64" />
         <textarea
           id="txt"
           placeholder="Enter text (or Base64) to encode or decode..."
@@ -102,7 +105,7 @@ export default function Base64Client() {
             </div>
           </div>
         )}
-        <div className="intro">
+  <div className="intro">
           <h2>What is Base64?</h2>
           <p>
             Base64 is an encoding scheme that converts binary data into ASCII
@@ -119,13 +122,22 @@ export default function Base64Client() {
           </p>
           <h2>Application Scenarios</h2>
           <p>
-            - Embedding images in HTML/CSS
-            <br />
-            - Data transfer in APIs
-            <br />- Email attachments encoding
+            - Embedding images (data URIs) in HTML/CSS
+            <br />- Encoding binary for JSON / form transport
+            <br />- Email (MIME) content transfer
+            <br />- Quick text obfuscation (not security)
+          </p>
+          <h2>Security Notes</h2>
+          <p>
+            Base64 provides zero confidentiality or integrity. Anyone who sees
+            the string can decode it instantly. Do not rely on Base64 to hide
+            secrets; pair with real encryption (e.g. AES-GCM) if protection is
+            required. When embedding large assets, note that Base64 inflates
+            size (~33%).
           </p>
         </div>
       </div>
+      <ToolLinks />
     </div>
   );
 }

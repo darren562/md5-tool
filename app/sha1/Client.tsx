@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import CryptoJS from "crypto-js";
+import ToolLinks from "../components/ToolLinks";
+import { SafetyNote } from "../components/SafetyNote";
 
 export default function Sha1Client() {
   const [inputText, setInputText] = useState("");
@@ -36,6 +38,7 @@ export default function Sha1Client() {
     <div className="container">
       <div className="box">
         <h1>SHA-1 Hash Generator</h1>
+        <SafetyNote kind="sha1" />
         <textarea
           id="txt"
           placeholder="Enter text to hash..."
@@ -66,17 +69,24 @@ export default function Sha1Client() {
             </div>
           </div>
         )}
-        <div className="intro">
+  <div className="intro">
           <h2>What is SHA‑1?</h2>
           <p>
-            SHA‑1 (Secure Hash Algorithm 1) is a cryptographic hash function
-            that produces a 160‑bit digest. It is considered weak for
-            cryptographic security due to known collision attacks, but it can
-            still be used for non‑security‑critical purposes like simple data
-            checksums and legacy compatibility.
+            SHA‑1 (Secure Hash Algorithm 1) outputs a 160‑bit digest. It was
+            widely used for signatures and integrity but now has practical
+            collision attacks (chosen-prefix collisions demonstrated). Modern
+            security protocols have migrated to SHA‑256 or stronger.
+          </p>
+          <h2>Legacy / Security Notes</h2>
+          <p>
+            Only use SHA‑1 where you must interoperate with legacy systems and a
+            collision would have low impact. Do not use for new signatures,
+            certificate chains, or commit integrity; choose SHA‑256/512 or
+            SHA‑3/BLAKE3 families depending on requirements.
           </p>
         </div>
       </div>
+      <ToolLinks />
     </div>
   );
 }

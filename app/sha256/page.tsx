@@ -16,14 +16,14 @@ export const metadata: Metadata = {
       "Free online SHA256 hash generator for text encryption. Instant SHA256 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
     type: "website",
     url: "https://www.hashkitly.com/sha256",
-    images: ["https://www.hashkitly.com/favicon.ico"],
+    images: ["https://www.hashkitly.com/social-card.svg"],
   },
   twitter: {
     card: "summary",
     title: "SHA256 Online Hash Generator & Text Encryption | Free & Secure",
     description:
       "Free online SHA256 hash generator for text encryption. Instant SHA256 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
-    images: ["https://www.hashkitly.com/favicon.ico"],
+    images: ["https://www.hashkitly.com/social-card.svg"],
   },
   alternates: {
     canonical: "https://www.hashkitly.com/sha256",
