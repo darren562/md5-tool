@@ -7,9 +7,13 @@ const links = [
   { href: "/", label: "MD5" },
   { href: "/base64", label: "Base64" },
   { href: "/sha256", label: "SHA256" },
+  { href: "/sha3", label: "SHA-3" },
   { href: "/sha1", label: "SHA-1" },
   { href: "/sha512", label: "SHA-512" },
+  { href: "/ripemd160", label: "RIPEMD-160" },
   { href: "/aes", label: "AES" },
+  { href: "/hmac-sha256", label: "HMAC-SHA256" },
+  { href: "/hmac-sha512", label: "HMAC-SHA512" },
   { href: "/privacy", label: "Privacy" },
 ];
 

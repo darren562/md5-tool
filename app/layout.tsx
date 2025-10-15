@@ -130,6 +130,11 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "SHA-3",
+                url: "https://www.hashkitly.com/sha3",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "SHA-1",
                 url: "https://www.hashkitly.com/sha1",
               },
@@ -140,8 +145,23 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "RIPEMD-160",
+                url: "https://www.hashkitly.com/ripemd160",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "AES",
                 url: "https://www.hashkitly.com/aes",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "HMAC-SHA256",
+                url: "https://www.hashkitly.com/hmac-sha256",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "HMAC-SHA512",
+                url: "https://www.hashkitly.com/hmac-sha512",
               },
               {
                 "@type": "SiteNavigationElement",

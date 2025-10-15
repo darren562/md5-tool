@@ -19,6 +19,12 @@
   <priority>0.8</priority>
   </url>
   <url>
+  <loc>https://www.hashkitly.com/sha3</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
   <loc>https://www.hashkitly.com/sha1</loc>
   <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
@@ -31,7 +37,25 @@
   <priority>0.75</priority>
   </url>
   <url>
+  <loc>https://www.hashkitly.com/ripemd160</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+  </url>
+  <url>
   <loc>https://www.hashkitly.com/aes</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/hmac-sha256</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/hmac-sha512</loc>
   <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>

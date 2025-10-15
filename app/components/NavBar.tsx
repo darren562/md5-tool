@@ -33,14 +33,26 @@ export default function NavBar() {
           <Link href="/sha256" className={isActive("/sha256")}>
             SHA256
           </Link>
+          <Link href="/sha3" className={isActive("/sha3")}>
+            SHA-3
+          </Link>
           <Link href="/sha1" className={isActive("/sha1")}>
             SHA-1
           </Link>
           <Link href="/sha512" className={isActive("/sha512")}>
             SHA-512
           </Link>
+          <Link href="/ripemd160" className={isActive("/ripemd160")}>
+            RIPEMD-160
+          </Link>
           <Link href="/aes" className={isActive("/aes")}>
             AES
+          </Link>
+          <Link href="/hmac-sha256" className={isActive("/hmac-sha256")}>
+            HMAC-SHA256
+          </Link>
+          <Link href="/hmac-sha512" className={isActive("/hmac-sha512")}>
+            HMAC-SHA512
           </Link>
           <Link href="/privacy" className={isActive("/privacy")}>
             Privacy
