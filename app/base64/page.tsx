@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Free online Base64 encoder and decoder for text. Instantly encode or decode Base64 in your browser with no data upload. Safe, private, and easy to use.",
   keywords:
-    "Base64, encode, decode, online converter, text encoding, base64 online, base64 tool, privacy, secure",
+    "base64 encode text online, base64 decode string online, browser base64 converter, base64 without upload, free base64 encoder decoder, copy base64 output",
   icons: {
     icon: "/favicon.ico",
   },

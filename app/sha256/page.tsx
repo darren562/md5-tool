@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Free online SHA256 hash generator for text encryption. Instant SHA256 hash calculation in your browser with no data upload. Perfect for password hashing and text verification.",
   keywords:
-    "SHA256, hash, online, encryption, text, generator, sha256 online, sha256 tool, password hash, secure hash",
+    "sha256 online generator, hash string to sha256, browser sha256 calculator, verify sha256 checksum online, create sha256 without upload",
   icons: {
     icon: "/favicon.ico",
   },

@@ -436,4 +436,40 @@ textarea:focus {
   color: #1e40af;
 }
 
+/* LongTailSEO styles */
+.ltseo { margin-top: 24px; }
+.ltseo__title {
+  font-size: 18px;
+  color: #1e40af;
+  margin: 12px 0 14px;
+}
+.ltseo__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+}
+.ltseo__col {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.ltseo__subtitle {
+  font-size: 16px;
+  margin: 4px 0 12px;
+  color: #0f172a;
+}
+.ltseo__faq { margin: 0; }
+.ltseo__qa { margin: 0 0 12px; }
+.ltseo__q { font-weight: 700; color: #0f172a; }
+.ltseo__a { margin: 4px 0 0; color: #475569; }
+.ltseo__list { margin: 0; padding-left: 18px; }
+.ltseo__link { color: #1e40af; text-decoration: none; }
+.ltseo__link:hover { text-decoration: underline; }
+
+@media (max-width: 780px) {
+  .ltseo__grid { grid-template-columns: 1fr; }
+}
+
 

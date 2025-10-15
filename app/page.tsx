@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "./components/ToolLinks";
 import { SafetyNote } from "./components/SafetyNote";
+import LongTailSEO from "./components/LongTailSEO";
 
 export default function Home() {
   const [inputText, setInputText] = useState("");
@@ -16,26 +17,18 @@ export default function Home() {
 
   const handleEncrypt = () => {
     const text = inputText.trim();
-    console.log("Input text:", text);
-
     if (!text) {
       alert("Please enter text to hash");
       return;
     }
-
     const h32 = CryptoJS.MD5(text).toString();
     const h16 = h32.substr(8, 16);
-
-    console.log("MD5 result:", { h32, h16 });
-
     const newResults = {
       l32: h32,
       u32: h32.toUpperCase(),
       l16: h16,
       u16: h16.toUpperCase(),
     };
-
-    console.log("Set result:", newResults);
     setResults(newResults);
   };
 
@@ -189,6 +182,51 @@ export default function Home() {
             are initialized and updated across multiple rounds to produce a
             128‑bit MD5 digest.
           </p>
+
+          {/* Long-tail SEO inside intro */}
+          <LongTailSEO
+            title="MD5 hash online: long‑tail FAQs"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "MD5 Hash Generator", url: "https://www.hashkitly.com/" },
+            ]}
+            faqs={[
+              {
+                q: "How to generate an MD5 hash online?",
+                a: "Type your text into the box above and click Generate. The MD5 (32‑char and 16‑char) is calculated instantly in your browser—no data upload.",
+              },
+              {
+                q: "How do I get a 16‑character MD5?",
+                a: "A 16‑character MD5 is the middle 16 hex digits of the 32‑character MD5. This tool shows both 32‑char and 16‑char forms.",
+              },
+              {
+                q: "Is MD5 secure for passwords?",
+                a: "No. MD5 is fast and not appropriate for password storage. Use bcrypt, scrypt, Argon2, or PBKDF2 with a unique salt.",
+              },
+              {
+                q: "Does this MD5 tool upload my data?",
+                a: "No. Everything runs locally in your browser (client‑side). Your input never leaves your device.",
+              },
+            ]}
+            relatedLinks={[
+              {
+                name: "SHA256 Hash Generator",
+                url: "https://www.hashkitly.com/sha256",
+              },
+              {
+                name: "SHA‑1 Hash Generator",
+                url: "https://www.hashkitly.com/sha1",
+              },
+              {
+                name: "CRC32 Checksum",
+                url: "https://www.hashkitly.com/crc32",
+              },
+              {
+                name: "Base64 Encode/Decode",
+                url: "https://www.hashkitly.com/base64",
+              },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />
