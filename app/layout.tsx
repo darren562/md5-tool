@@ -135,8 +135,18 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "SHA-224",
+                url: "https://www.hashkitly.com/sha224",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "SHA-1",
                 url: "https://www.hashkitly.com/sha1",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "SHA-384",
+                url: "https://www.hashkitly.com/sha384",
               },
               {
                 "@type": "SiteNavigationElement",
@@ -155,6 +165,16 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "AES-GCM",
+                url: "https://www.hashkitly.com/aes-gcm",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "3DES",
+                url: "https://www.hashkitly.com/tripledes",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "HMAC-SHA256",
                 url: "https://www.hashkitly.com/hmac-sha256",
               },
@@ -162,6 +182,66 @@ export default function RootLayout({
                 "@type": "SiteNavigationElement",
                 name: "HMAC-SHA512",
                 url: "https://www.hashkitly.com/hmac-sha512",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "HMAC-SHA1",
+                url: "https://www.hashkitly.com/hmac-sha1",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "URL",
+                url: "https://www.hashkitly.com/url",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "UUID",
+                url: "https://www.hashkitly.com/uuid",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "PBKDF2",
+                url: "https://www.hashkitly.com/pbkdf2",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "HKDF",
+                url: "https://www.hashkitly.com/hkdf",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC32",
+                url: "https://www.hashkitly.com/crc32",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Hex",
+                url: "https://www.hashkitly.com/hex",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base32",
+                url: "https://www.hashkitly.com/base32",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base58",
+                url: "https://www.hashkitly.com/base58",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Random",
+                url: "https://www.hashkitly.com/random",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "JWT",
+                url: "https://www.hashkitly.com/jwt",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "RSA-OAEP",
+                url: "https://www.hashkitly.com/rsa-oaep",
               },
               {
                 "@type": "SiteNavigationElement",

@@ -12,11 +12,35 @@
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://www.hashkitly.com/aes-gcm</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    </url>
   <url>
   <loc>https://www.hashkitly.com/sha256</loc>
   <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://www.hashkitly.com/random</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://www.hashkitly.com/jwt</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    </url>
+  <url>
+  <loc>https://www.hashkitly.com/tripledes</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/sha3</loc>
@@ -25,10 +49,70 @@
   <priority>0.8</priority>
   </url>
   <url>
+  <loc>https://www.hashkitly.com/sha224</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/url</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/base32</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/base58</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/uuid</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/pbkdf2</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/hkdf</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/crc32</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/hex</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
   <loc>https://www.hashkitly.com/sha1</loc>
   <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.75</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/sha384</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
   </url>
   <url>
   <loc>https://www.hashkitly.com/sha512</loc>
@@ -49,6 +133,12 @@
   <priority>0.7</priority>
   </url>
   <url>
+  <loc>https://www.hashkitly.com/tripledes</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
   <loc>https://www.hashkitly.com/hmac-sha256</loc>
   <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
@@ -61,9 +151,21 @@
   <priority>0.7</priority>
   </url>
   <url>
+  <loc>https://www.hashkitly.com/hmac-sha1</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+  </url>
+  <url>
   <loc>https://www.hashkitly.com/privacy</loc>
   <lastmod>2025-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.4</priority>
+  </url>
+  <url>
+  <loc>https://www.hashkitly.com/rsa-oaep</loc>
+  <lastmod>2025-10-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
   </url>
 </urlset>
