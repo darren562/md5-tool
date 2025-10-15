@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function Ripemd160Client() {
   const [inputText, setInputText] = useState("");
@@ -75,6 +76,35 @@ export default function Ripemd160Client() {
             Prefer SHA-2 or SHA-3 for new designs. For passwords, use slow KDFs
             (bcrypt, scrypt, Argon2, PBKDF2) with unique salts.
           </p>
+
+          <LongTailSEO
+            title="RIPEMD-160 hash generator online  free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              {
+                name: "RIPEMD-160",
+                url: "https://www.hashkitly.com/ripemd160",
+              },
+            ]}
+            faqs={[
+              {
+                q: "Is RIPEMD-160 still used?",
+                a: "Mostly for legacy compatibility; prefer SHA-2/3 for new applications.",
+              },
+              {
+                q: "Where does RIPEMD-160 appear?",
+                a: "In some cryptocurrency address derivations and historical systems.",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. Hashing is performed in your browser only.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "SHA-1", url: "https://www.hashkitly.com/sha1" },
+              { name: "SHA-256", url: "https://www.hashkitly.com/sha256" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

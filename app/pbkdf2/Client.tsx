@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function Pbkdf2Client() {
   const [passphrase, setPassphrase] = useState("");
@@ -202,6 +203,32 @@ export default function Pbkdf2Client() {
             iteration counts and random salts; evaluate Argon2 or scrypt for new
             systems.
           </p>
+
+          <LongTailSEO
+            title="PBKDF2 online  password-based key derivation (in-browser, no upload)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "PBKDF2", url: "https://www.hashkitly.com/pbkdf2" },
+            ]}
+            faqs={[
+              {
+                q: "What parameters matter most?",
+                a: "Iterations (cost), salt, selected hash, and output length directly affect security.",
+              },
+              {
+                q: "When to choose Argon2 or scrypt?",
+                a: "For better GPU/ASIC resistance and memory hardness; PBKDF2 is still widely supported.",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. Key derivation is computed locally in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "HKDF", url: "https://www.hashkitly.com/hkdf" },
+              { name: "Random Bytes", url: "https://www.hashkitly.com/random" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

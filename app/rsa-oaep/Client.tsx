@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 async function genKeyPair() {
   return crypto.subtle.generateKey(
@@ -253,6 +254,32 @@ export default function RsaOaepClient() {
             RSA-OAEP is suitable for small messages; for larger data, encrypt a
             random symmetric key and use AES-GCM (hybrid encryption).
           </p>
+
+          <LongTailSEO
+            title="RSA-OAEP encrypt/decrypt online  in-browser, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "RSA-OAEP", url: "https://www.hashkitly.com/rsa-oaep" },
+            ]}
+            faqs={[
+              {
+                q: "What is OAEP?",
+                a: "Optimal Asymmetric Encryption Padding; it adds randomness and security to RSA encryption.",
+              },
+              {
+                q: "How to encrypt large files?",
+                a: "Use hybrid encryption: generate a random AES key, encrypt the file with AES-GCM, then encrypt the AES key with RSA-OAEP.",
+              },
+              {
+                q: "Does this RSA tool upload my keys or data?",
+                a: "No. Keys are generated/exported locally and encryption happens in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "AES-GCM", url: "https://www.hashkitly.com/aes-gcm" },
+              { name: "HKDF", url: "https://www.hashkitly.com/hkdf" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

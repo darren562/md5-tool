@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 async function deriveKey(
   passphrase: string,
@@ -212,6 +213,39 @@ export default function AesGcmClient() {
             confidentiality and integrity. This demo derives a key from a
             passphrase using PBKDF2 (SHA-256) with configurable iterations.
           </p>
+
+          <LongTailSEO
+            title="AES-GCM encrypt/decrypt online  in-browser, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "AES-GCM", url: "https://www.hashkitly.com/aes-gcm" },
+            ]}
+            faqs={[
+              {
+                q: "Why use AES-GCM?",
+                a: "AES-GCM provides confidentiality and integrity with a built-in MAC (GCM tag).",
+              },
+              {
+                q: "What must be unique?",
+                a: "The IV (nonce) must be unique per key. Never reuse an IV with the same key.",
+              },
+              {
+                q: "How to derive keys from passphrases?",
+                a: "Use a KDF (Argon2, scrypt, or PBKDF2) with a random salt to derive an AES key from a passphrase.",
+              },
+              {
+                q: "Does this AES-GCM tool upload my data?",
+                a: "No. All operations happen in your browser (client-side).",
+              },
+            ]}
+            relatedLinks={[
+              {
+                name: "AES (CryptoJS demo)",
+                url: "https://www.hashkitly.com/aes",
+              },
+              { name: "PBKDF2", url: "https://www.hashkitly.com/pbkdf2" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

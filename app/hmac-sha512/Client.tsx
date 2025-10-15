@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function HmacSha512Client() {
   const [inputText, setInputText] = useState("");
@@ -97,6 +98,34 @@ export default function HmacSha512Client() {
             Keep keys secret, set clear key IDs/rotation, and sign exactly the
             canonical bytes you intend to verify.
           </p>
+
+          <LongTailSEO
+            title="HMAC-SHA512: FAQs"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              {
+                name: "HMAC-SHA512",
+                url: "https://www.hashkitly.com/hmac-sha512",
+              },
+            ]}
+            faqs={[
+              {
+                q: "What does HMAC guarantee?",
+                a: "Integrity and authenticity (with a shared secret). It does not encrypt the message.",
+              },
+              {
+                q: "Which is better: SHA256 or SHA512?",
+                a: "Both are strong; SHA512 has a larger internal state. Choose based on platform performance and compatibility.",
+              },
+            ]}
+            relatedLinks={[
+              {
+                name: "HMAC-SHA256",
+                url: "https://www.hashkitly.com/hmac-sha256",
+              },
+              { name: "JWT", url: "https://www.hashkitly.com/jwt" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

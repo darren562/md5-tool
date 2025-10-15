@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function AesClient() {
   const [inputText, setInputText] = useState("");
@@ -153,6 +154,32 @@ export default function AesClient() {
             tampering; store salt + IV with ciphertext. Never reuse IVs; avoid
             ECB; do not roll your own crypto primitives.
           </p>
+
+          <LongTailSEO
+            title="AES encrypt/decrypt online – in browser, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "AES", url: "https://www.hashkitly.com/aes" },
+            ]}
+            faqs={[
+              {
+                q: "Is this AES secure?",
+                a: "This is a demo using CryptoJS passphrase mode. For production, use a KDF, random IV, and AES-GCM.",
+              },
+              {
+                q: "Where is encryption done?",
+                a: "In your browser only; no data is uploaded.",
+              },
+              {
+                q: "What about key derivation?",
+                a: "Use PBKDF2/Argon2/scrypt to derive keys from passphrases.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "AES-GCM", url: "https://www.hashkitly.com/aes-gcm" },
+              { name: "PBKDF2", url: "https://www.hashkitly.com/pbkdf2" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

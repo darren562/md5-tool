@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 function base64UrlToUint8Array(input: string): Uint8Array {
   const pad =
@@ -85,6 +86,38 @@ export default function JwtClient() {
             This tool decodes the Base64URL-encoded header and payload. It does
             not verify the signature. Always validate tokens server-side.
           </p>
+
+          <LongTailSEO
+            title="JWT decode online  header/payload only (no verification, no upload)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "JWT", url: "https://www.hashkitly.com/jwt" },
+            ]}
+            faqs={[
+              {
+                q: "Does decoding verify a JWT?",
+                a: "No. Decoding only reveals header/payload. Verification requires checking signature, issuer, audience, and expiry.",
+              },
+              {
+                q: "What is Base64URL?",
+                a: "A URL-safe Base64 variant used by JWT (characters '-' and '_' instead of '+' and '/').",
+              },
+              {
+                q: "Does this tool upload my token?",
+                a: "No. Decoding happens locally in your browser; tokens are not sent anywhere.",
+              },
+            ]}
+            relatedLinks={[
+              {
+                name: "HMAC-SHA256",
+                url: "https://www.hashkitly.com/hmac-sha256",
+              },
+              {
+                name: "HMAC-SHA512",
+                url: "https://www.hashkitly.com/hmac-sha512",
+              },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function TripleDESClient() {
   const [inputText, setInputText] = useState("");
@@ -149,6 +150,32 @@ export default function TripleDESClient() {
             use AES-GCM with KDF + random IV, and avoid DES/3DES for new
             systems.
           </p>
+
+          <LongTailSEO
+            title="3DES (TripleDES) online  legacy cipher FAQs (no upload)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "3DES", url: "https://www.hashkitly.com/tripledes" },
+            ]}
+            faqs={[
+              {
+                q: "Is 3DES still safe?",
+                a: "3DES is considered legacy with deprecation in many standards; prefer AES-GCM for new systems.",
+              },
+              {
+                q: "Block size concerns?",
+                a: "3DES/DES use 64-bit blocks, making certain modes riskier at large volumes (birthday bound).",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. The demo runs entirely in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "AES-GCM", url: "https://www.hashkitly.com/aes-gcm" },
+              { name: "AES (CryptoJS)", url: "https://www.hashkitly.com/aes" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

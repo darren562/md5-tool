@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function HmacSha256Client() {
   const [inputText, setInputText] = useState("");
@@ -98,6 +99,38 @@ export default function HmacSha256Client() {
             Keep keys secret and rotate as needed. Use hex/base64 consistently
             for transport. Avoid key reuse across domains.
           </p>
+
+          <LongTailSEO
+            title="HMAC-SHA256 generator online  free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              {
+                name: "HMAC-SHA256",
+                url: "https://www.hashkitly.com/hmac-sha256",
+              },
+            ]}
+            faqs={[
+              {
+                q: "What does HMAC guarantee?",
+                a: "Integrity and authenticity (with a shared secret). Not confidentiality.",
+              },
+              {
+                q: "How to sign the correct bytes?",
+                a: "Define a canonical message format (ordering, encoding) and sign exactly those bytes.",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. HMAC is computed locally in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              {
+                name: "HMAC-SHA512",
+                url: "https://www.hashkitly.com/hmac-sha512",
+              },
+              { name: "JWT", url: "https://www.hashkitly.com/jwt" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

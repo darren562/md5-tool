@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 function toHex(bytes: Uint8Array): string {
   return Array.from(bytes)
@@ -103,6 +104,32 @@ export default function RandomClient() {
             Generated via the browser CSPRNG (window.crypto.getRandomValues).
             Suitable for nonces, salts, and tokens (with appropriate handling).
           </p>
+
+          <LongTailSEO
+            title="Random bytes generator online  in-browser CSPRNG (no upload)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "Random", url: "https://www.hashkitly.com/random" },
+            ]}
+            faqs={[
+              {
+                q: "Is getRandomValues cryptographically secure?",
+                a: "Yes, it uses the platform CSPRNG designed for cryptographic use.",
+              },
+              {
+                q: "How many bytes should I generate?",
+                a: "Depends on application; 16 bytes for nonces, 32 bytes for keys are common baselines.",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. All randomness is generated locally in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "HKDF", url: "https://www.hashkitly.com/hkdf" },
+              { name: "PBKDF2", url: "https://www.hashkitly.com/pbkdf2" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

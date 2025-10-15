@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function Sha384Client() {
   const [inputText, setInputText] = useState("");
@@ -69,6 +70,29 @@ export default function Sha384Client() {
             SHA-384 is a member of the SHA-2 family producing a 384-bit digest.
             Good for integrity and signatures (inside proper schemes).
           </p>
+
+          <LongTailSEO
+            title="SHA-384 hash generator online – free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "SHA-384", url: "https://www.hashkitly.com/sha384" },
+            ]}
+            faqs={[
+              { q: "Is SHA-384 reversible?", a: "No. It's a one-way hash." },
+              {
+                q: "When to use SHA-384?",
+                a: "Integrity and digital signatures in modern systems (within proper schemes).",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. Everything runs in your browser with no server upload.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "SHA-512", url: "https://www.hashkitly.com/sha512" },
+              { name: "SHA-256", url: "https://www.hashkitly.com/sha256" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

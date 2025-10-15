@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 const ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 const MAP: Record<string, number> = Object.fromEntries(
@@ -141,6 +142,32 @@ export default function Base58Client() {
             Base58 is an encoding using a restricted alphanumeric alphabet (no 0
             O I l). Popular in Bitcoin addresses.
           </p>
+
+          <LongTailSEO
+            title="Base58 encoding online  free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "Base58", url: "https://www.hashkitly.com/base58" },
+            ]}
+            faqs={[
+              {
+                q: "Why Base58 instead of Base64?",
+                a: "Base58 avoids lookalike characters and symbols, useful for human entry (e.g., cryptocurrency addresses).",
+              },
+              {
+                q: "Is Base58 secure?",
+                a: "No. It's encoding only. Use cryptography for security.",
+              },
+              {
+                q: "Does this Base58 tool upload my data?",
+                a: "No. All encoding/decoding runs locally in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "Base32", url: "https://www.hashkitly.com/base32" },
+              { name: "Hex", url: "https://www.hashkitly.com/hex" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

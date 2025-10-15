@@ -4,6 +4,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function Sha1Client() {
   const [inputText, setInputText] = useState("");
@@ -84,6 +85,31 @@ export default function Sha1Client() {
             certificate chains, or commit integrity; choose SHA‑256/512 or
             SHA‑3/BLAKE3 families depending on requirements.
           </p>
+          <LongTailSEO
+            title="SHA-1 hash generator online  legacy (free, no upload)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "SHA-1", url: "https://www.hashkitly.com/sha1" },
+            ]}
+            faqs={[
+              {
+                q: "Is SHA-1 broken?",
+                a: "Practical chosen-prefix collisions exist. Avoid for new security designs.",
+              },
+              {
+                q: "Migration path?",
+                a: "Move to SHA-256/512 or SHA-3 depending on requirements and ecosystem support.",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. Hashing is performed entirely in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "SHA-256", url: "https://www.hashkitly.com/sha256" },
+              { name: "SHA-3", url: "https://www.hashkitly.com/sha3" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

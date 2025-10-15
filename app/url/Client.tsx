@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 function encode(text: string) {
   try {
@@ -82,6 +83,32 @@ export default function UrlClient() {
             special characters. It is not a security measure and does not hide
             content.
           </p>
+
+          <LongTailSEO
+            title="URL encode/decode online  free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "URL", url: "https://www.hashkitly.com/url" },
+            ]}
+            faqs={[
+              {
+                q: "What characters get encoded?",
+                a: "Reserved characters like space, ?, &, = and non-ASCII are percent-encoded in URLs.",
+              },
+              {
+                q: "Is URL encoding encryption?",
+                a: "No. It's a representation for safe transport in URLs and HTTP.",
+              },
+              {
+                q: "Does this URL tool upload my data?",
+                a: "No. All encoding/decoding happens in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "Base64", url: "https://www.hashkitly.com/base64" },
+              { name: "Hex", url: "https://www.hashkitly.com/hex" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

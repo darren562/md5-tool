@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 function toHex(text: string): string {
   const bytes = new TextEncoder().encode(text);
@@ -95,6 +96,32 @@ export default function HexClient() {
             Hex is a human-readable encoding of bytes. This tool converts
             between UTF-8 text and hex.
           </p>
+
+          <LongTailSEO
+            title="Hex encode/decode online  free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "Hex", url: "https://www.hashkitly.com/hex" },
+            ]}
+            faqs={[
+              {
+                q: "Is hex encryption?",
+                a: "No. It's just a textual representation of bytes.",
+              },
+              {
+                q: "Why convert between text and hex?",
+                a: "Useful for debugging, binary protocols, and representing bytes in logs or code.",
+              },
+              {
+                q: "Does this Hex tool upload my data?",
+                a: "No. Everything runs client-side in your browser; no server upload.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "Base64", url: "https://www.hashkitly.com/base64" },
+              { name: "Base32", url: "https://www.hashkitly.com/base32" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

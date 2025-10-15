@@ -4,6 +4,7 @@ import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
 import CryptoJS from "crypto-js";
+import LongTailSEO from "../components/LongTailSEO";
 
 async function hkdfExtractExpand(
   ikm: Uint8Array,
@@ -167,6 +168,35 @@ export default function HkdfClient() {
             material using HMAC as a PRF. It is commonly used to expand shared
             secrets into multiple keys.
           </p>
+
+          <LongTailSEO
+            title="HKDF online  HMAC-based key derivation (in-browser, no upload)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "HKDF", url: "https://www.hashkitly.com/hkdf" },
+            ]}
+            faqs={[
+              {
+                q: "What does HKDF do?",
+                a: "It extracts and expands key material using HMAC, turning a shared secret into strong keys.",
+              },
+              {
+                q: "Is HKDF a password hasher?",
+                a: "No. Use bcrypt/scrypt/Argon2 for password hashing; HKDF is for key expansion.",
+              },
+              {
+                q: "Does this tool upload my data?",
+                a: "No. HKDF derivation runs entirely in your browser.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "PBKDF2", url: "https://www.hashkitly.com/pbkdf2" },
+              {
+                name: "HMAC-SHA256",
+                url: "https://www.hashkitly.com/hmac-sha256",
+              },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 export default function Base64Client() {
   const [inputText, setInputText] = useState("");
@@ -12,7 +13,6 @@ export default function Base64Client() {
   const handleEncode = () => {
     const text = inputText.trim();
     if (!text) {
-      alert("Please enter text to encode");
       return;
     }
     setResult(btoa(unescape(encodeURIComponent(text))));
@@ -135,6 +135,50 @@ export default function Base64Client() {
             required. When embedding large assets, note that Base64 inflates
             size (~33%).
           </p>
+
+          <LongTailSEO
+            title="Base64 encode/decode online  free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              {
+                name: "Base64 Encode/Decode",
+                url: "https://www.hashkitly.com/base64",
+              },
+            ]}
+            faqs={[
+              {
+                q: "Is Base64 encryption?",
+                a: "No. Base64 is only an encoding. Anyone can decode it back to the original bytes without any secret.",
+              },
+              {
+                q: "Why does Base64 increase size by ~33%?",
+                a: "Base64 maps 3 bytes into 4 ASCII characters, adding overhead. It trades size for safe text transport.",
+              },
+              {
+                q: "How do I decode UTF-8 text safely?",
+                a: "Decode Base64 to bytes and then interpret with UTF-8. In JavaScript, use atob/btoa with proper UTF-8 handling (encodeURIComponent/unescape workaround).",
+              },
+              {
+                q: "Does this Base64 tool upload my data?",
+                a: "No. It runs 100% in your browser (client-side). Nothing is sent to any server.",
+              },
+              {
+                q: "When should I use Base64?",
+                a: "Use it for text-safe transport (emails, JSON, URLs with base64url). Do not use it to hide secrets.",
+              },
+            ]}
+            relatedLinks={[
+              {
+                name: "URL Encode/Decode",
+                url: "https://www.hashkitly.com/url",
+              },
+              { name: "Hex Encoder", url: "https://www.hashkitly.com/hex" },
+              {
+                name: "SHA256 Hash Generator",
+                url: "https://www.hashkitly.com/sha256",
+              },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

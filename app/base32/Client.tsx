@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ToolLinks from "../components/ToolLinks";
 import { SafetyNote } from "../components/SafetyNote";
+import LongTailSEO from "../components/LongTailSEO";
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"; // RFC 4648
 
@@ -118,6 +119,37 @@ export default function Base32Client() {
             Base32 encodes bytes into 32-character alphabet (RFC 4648). It is
             used for case-insensitive, URL-safe-ish representations.
           </p>
+
+          <LongTailSEO
+            title="Base32 encode/decode online  free, no upload (FAQs)"
+            breadcrumbs={[
+              { name: "Home", url: "https://www.hashkitly.com/" },
+              { name: "Base32", url: "https://www.hashkitly.com/base32" },
+            ]}
+            faqs={[
+              {
+                q: "Is Base32 the same as Base64?",
+                a: "No. Base32 uses a 32-character alphabet and is longer than Base64 for the same data.",
+              },
+              {
+                q: "Why use Base32?",
+                a: "It can be more human-friendly and case-insensitive for certain contexts like secrets/OTP seeds.",
+              },
+              {
+                q: "Does Base32 provide security?",
+                a: "No. It's encoding only—use encryption for confidentiality.",
+              },
+              {
+                q: "Does this Base32 tool upload my data?",
+                a: "No. It runs entirely in your browser; nothing is sent to a server.",
+              },
+            ]}
+            relatedLinks={[
+              { name: "Base64", url: "https://www.hashkitly.com/base64" },
+              { name: "Base58", url: "https://www.hashkitly.com/base58" },
+              { name: "Hex", url: "https://www.hashkitly.com/hex" },
+            ]}
+          />
         </div>
       </div>
       <ToolLinks />

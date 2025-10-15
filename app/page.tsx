@@ -185,7 +185,7 @@ export default function Home() {
 
           {/* Long-tail SEO inside intro */}
           <LongTailSEO
-            title="MD5 hash online: long‑tail FAQs"
+            title="MD5 hash generator online free, no upload (FAQs)"
             breadcrumbs={[
               { name: "Home", url: "https://www.hashkitly.com/" },
               { name: "MD5 Hash Generator", url: "https://www.hashkitly.com/" },
