@@ -51,7 +51,7 @@ export function SafetyNote({
   kind: keyof typeof MESSAGES;
   variant?: Variant;
 }) {
-  const icon = variant === "warn" ? "⚠️" : "💡";
+  const icon = "💡";
   return (
     <div
       className={`safety-note safety-note--${variant}`}
