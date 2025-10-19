@@ -195,6 +195,21 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "ROT13",
+                url: "https://www.hashkitly.com/rot13",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ROT47",
+                url: "https://www.hashkitly.com/rot47",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ASCII85",
+                url: "https://www.hashkitly.com/ascii85",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "UUID",
                 url: "https://www.hashkitly.com/uuid",
               },
@@ -215,6 +230,21 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "CRC32C",
+                url: "https://www.hashkitly.com/crc32c",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Adler-32",
+                url: "https://www.hashkitly.com/adler32",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC64",
+                url: "https://www.hashkitly.com/crc64",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "Hex",
                 url: "https://www.hashkitly.com/hex",
               },
@@ -225,13 +255,313 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "Base32hex",
+                url: "https://www.hashkitly.com/base32hex",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "Base58",
                 url: "https://www.hashkitly.com/base58",
               },
               {
                 "@type": "SiteNavigationElement",
+                name: "Base64url",
+                url: "https://www.hashkitly.com/base64url",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base36",
+                url: "https://www.hashkitly.com/base36",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base45",
+                url: "https://www.hashkitly.com/base45",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base62",
+                url: "https://www.hashkitly.com/base62",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 name: "Random",
                 url: "https://www.hashkitly.com/random",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "HMAC-MD5",
+                url: "https://www.hashkitly.com/hmac-md5",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "FNV-1a 32",
+                url: "https://www.hashkitly.com/fnv1a32",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Murmur3 (32)",
+                url: "https://www.hashkitly.com/murmur3",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "DJB2",
+                url: "https://www.hashkitly.com/djb2",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "SDBM",
+                url: "https://www.hashkitly.com/sdbm",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ELF",
+                url: "https://www.hashkitly.com/elf",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "FNV-1 32",
+                url: "https://www.hashkitly.com/fnv132",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "FNV-1 64",
+                url: "https://www.hashkitly.com/fnv164",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "FNV-1a 64",
+                url: "https://www.hashkitly.com/fnv1a64",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-8",
+                url: "https://www.hashkitly.com/crc8",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-24",
+                url: "https://www.hashkitly.com/crc24",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-7",
+                url: "https://www.hashkitly.com/crc7",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "xxHash32",
+                url: "https://www.hashkitly.com/xxhash32",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "SDBM",
+                url: "https://www.hashkitly.com/sdbm",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ELF",
+                url: "https://www.hashkitly.com/elf",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "FNV-1 32",
+                url: "https://www.hashkitly.com/fnv132",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "FNV-1 64",
+                url: "https://www.hashkitly.com/fnv164",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Z85",
+                url: "https://www.hashkitly.com/z85",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base91",
+                url: "https://www.hashkitly.com/base91",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base85 (RFC 1924)",
+                url: "https://www.hashkitly.com/base85-rfc1924",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base32 Crockford",
+                url: "https://www.hashkitly.com/base32-crockford",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Quoted-Printable",
+                url: "https://www.hashkitly.com/quoted-printable",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "HTML Entities",
+                url: "https://www.hashkitly.com/html-entities",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Caesar",
+                url: "https://www.hashkitly.com/caesar",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Vigenere",
+                url: "https://www.hashkitly.com/vigenere",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Atbash",
+                url: "https://www.hashkitly.com/atbash",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ROT5",
+                url: "https://www.hashkitly.com/rot5",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ROT18",
+                url: "https://www.hashkitly.com/rot18",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Morse",
+                url: "https://www.hashkitly.com/morse",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Rail Fence",
+                url: "https://www.hashkitly.com/railfence",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Affine",
+                url: "https://www.hashkitly.com/affine",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Baconian",
+                url: "https://www.hashkitly.com/baconian",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Polybius",
+                url: "https://www.hashkitly.com/polybius",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Playfair",
+                url: "https://www.hashkitly.com/playfair",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Beaufort",
+                url: "https://www.hashkitly.com/beaufort",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Autokey",
+                url: "https://www.hashkitly.com/autokey",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Porta",
+                url: "https://www.hashkitly.com/porta",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Bifid",
+                url: "https://www.hashkitly.com/bifid",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Columnar",
+                url: "https://www.hashkitly.com/columnar",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Scytale",
+                url: "https://www.hashkitly.com/scytale",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Double Transposition",
+                url: "https://www.hashkitly.com/double-transposition",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "XOR Cipher",
+                url: "https://www.hashkitly.com/xor-cipher",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Keyword Substitution",
+                url: "https://www.hashkitly.com/keyword",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Gronsfeld",
+                url: "https://www.hashkitly.com/gronsfeld",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "BKDR",
+                url: "https://www.hashkitly.com/bkdr",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Lose Lose",
+                url: "https://www.hashkitly.com/loselose",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Fletcher-16",
+                url: "https://www.hashkitly.com/fletcher16",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Fletcher-32",
+                url: "https://www.hashkitly.com/fletcher32",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-16/MODBUS",
+                url: "https://www.hashkitly.com/crc16-modbus",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-16/XMODEM",
+                url: "https://www.hashkitly.com/crc16-xmodem",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-16/IBM",
+                url: "https://www.hashkitly.com/crc16-ibm",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-16/CCITT-FALSE",
+                url: "https://www.hashkitly.com/crc16-ccitt",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-16/X25",
+                url: "https://www.hashkitly.com/crc16-x25",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-16/KERMIT",
+                url: "https://www.hashkitly.com/crc16-kermit",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Jenkins OAAT",
+                url: "https://www.hashkitly.com/jenkins",
               },
               {
                 "@type": "SiteNavigationElement",
@@ -245,7 +575,141 @@ export default function RootLayout({
               },
               {
                 "@type": "SiteNavigationElement",
-                name: "Privacy",
+                name: "Sum-8",
+                url: "https://www.hashkitly.com/sum8",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "XOR-8",
+                url: "https://www.hashkitly.com/xor8",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "LRC-8",
+                url: "https://www.hashkitly.com/lrc8",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "RS Hash",
+                url: "https://www.hashkitly.com/rshash",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "AP Hash",
+                url: "https://www.hashkitly.com/aphash",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "DEK Hash",
+                url: "https://www.hashkitly.com/dekhash",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "PJW Hash",
+                url: "https://www.hashkitly.com/pjwhash",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "JS Hash",
+                url: "https://www.hashkitly.com/jshash",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Luhn",
+                url: "https://www.hashkitly.com/luhn",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Verhoeff",
+                url: "https://www.hashkitly.com/verhoeff",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Damm",
+                url: "https://www.hashkitly.com/damm",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ISBN-10",
+                url: "https://www.hashkitly.com/isbn10",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "UUEncode",
+                url: "https://www.hashkitly.com/uuencode",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Base58Check",
+                url: "https://www.hashkitly.com/base58check",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Q-encoding",
+                url: "https://www.hashkitly.com/q-encoding",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ISBN-13",
+                url: "https://www.hashkitly.com/isbn13",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "ISSN",
+                url: "https://www.hashkitly.com/issn",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Soundex",
+                url: "https://www.hashkitly.com/soundex",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "IBAN",
+                url: "https://www.hashkitly.com/iban",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "SuperFastHash",
+                url: "https://www.hashkitly.com/superfasthash",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-32/BZIP2",
+                url: "https://www.hashkitly.com/crc32-bzip2",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "CRC-32/MPEG-2",
+                url: "https://www.hashkitly.com/crc32-mpeg2",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "EAN-13",
+                url: "https://www.hashkitly.com/ean13",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "EAN-8",
+                url: "https://www.hashkitly.com/ean8",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "UPC-A",
+                url: "https://www.hashkitly.com/upca",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "NATO Phonetic",
+                url: "https://www.hashkitly.com/nato",
+              },
+              {
+                "@type": "SiteNavigationElement",
+                name: "Leetspeak",
+                url: "https://www.hashkitly.com/leetspeak",
+              },
+              {
+                "@type": "SiteNavigationElement",
                 url: "https://www.hashkitly.com/privacy",
               },
             ],
