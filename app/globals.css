@@ -436,6 +436,47 @@ textarea:focus {
   color: #1e40af;
 }
 
+/* Mobile-friendly dropdown: full-width overlay below navbar */
+@media (max-width: 640px) {
+  .nav-cat { position: static; }
+  .dropdown-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 52px; /* approximate navbar height */
+    transform: none;
+    width: 100%;
+    padding: 8px 0 12px;
+    background: rgba(0, 0, 0, 0.06); /* subtle scrim */
+    z-index: 1000;
+  }
+  .dropdown-card,
+  .dropdown-card--narrow {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+    max-height: 65vh;
+  }
+}
+
+/* Mobile wrapping for nav categories */
+@media (max-width: 640px) {
+  .nav-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px 10px;
+  }
+  .nav-cats {
+    width: 100%;
+    margin-left: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .nav-cat-btn {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
+
 /* LongTailSEO styles */
 .ltseo { margin-top: 24px; }
 .ltseo__title {
