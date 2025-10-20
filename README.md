@@ -1,6 +1,6 @@
-# Hashkitly - Online MD5 Hash Generator for Text
+# Hashkitly - Online Hash Generator for Text
 
-[Try the online MD5 tool](https://www.hashkitly.com) — Fast, secure, and privacy-friendly MD5 hash generator for text.
+[Try the online tool](https://www.hashkitly.com) — Fast, secure, and privacy-friendly MD5 hash generator for text.
 
 ## 🌟 Features
 
