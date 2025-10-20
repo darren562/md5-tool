@@ -34,10 +34,14 @@ export default function LongTailSEO({
       item: b.url,
     })),
   };
+  const hasRelated = !!relatedLinks?.length;
+  const gridClass = hasRelated
+    ? "ltseo__grid"
+    : "ltseo__grid ltseo__grid--single";
   return (
     <section className="ltseo">
       <h2 className="ltseo__title">{title}</h2>
-      <div className="ltseo__grid">
+      <div className={gridClass}>
         <div className="ltseo__col ltseo__col--faq">
           <h3 className="ltseo__subtitle">FAQs</h3>
           <dl className="ltseo__faq">

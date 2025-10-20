@@ -478,16 +478,28 @@ textarea:focus {
 }
 
 /* LongTailSEO styles */
-.ltseo { margin-top: 24px; }
+.ltseo { margin: 24px auto 0; max-width: 960px; padding: 0 16px; }
 .ltseo__title {
   font-size: 18px;
   color: #1e40af;
   margin: 12px 0 14px;
+  text-align: center;
 }
 .ltseo__grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 20px;
+  justify-content: center; /* center the grid within the container */
+  justify-items: center;    /* center grid items within their tracks */
+}
+.ltseo__grid--single {
+  display: block;           /* disable grid when only one child */
+  text-align: center;       /* center contents */
+}
+.ltseo__grid--single .ltseo__col {
+  display: inline-block;    /* shrink to content width */
+  max-width: 720px;         /* readable width */
+  width: 100%;              /* but not exceed container */
 }
 .ltseo__col {
   background: #ffffff;
@@ -495,17 +507,26 @@ textarea:focus {
   border-radius: 10px;
   padding: 14px 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  width: 100%;
+}
+.ltseo__col--faq {
+  justify-self: center;   /* center within grid track */
+  width: auto;            /* override 100% so centering is visible */
+  max-width: 640px;       /* keep a readable width */
+  margin-left: auto;      /* ensure horizontal centering */
+  margin-right: auto;
 }
 .ltseo__subtitle {
   font-size: 16px;
   margin: 4px 0 12px;
   color: #0f172a;
+  text-align: center;
 }
-.ltseo__faq { margin: 0; }
+.ltseo__faq { margin: 0; text-align: center; }
 .ltseo__qa { margin: 0 0 12px; }
 .ltseo__q { font-weight: 700; color: #0f172a; }
 .ltseo__a { margin: 4px 0 0; color: #475569; }
-.ltseo__list { margin: 0; padding-left: 18px; }
+.ltseo__list { margin: 0; padding-left: 0; list-style-position: inside; text-align: center; }
 .ltseo__link { color: #1e40af; text-decoration: none; }
 .ltseo__link:hover { text-decoration: underline; }
 
