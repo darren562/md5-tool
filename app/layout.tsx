@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import NavBar from "./components/NavBar";
+import RouteSEO from "./components/RouteSEO";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -716,6 +717,8 @@ export default function RootLayout({
           })}
         </Script>
         {children}
+        {/* Per-route long-tail SEO (FAQs, breadcrumbs, related links) */}
+        <RouteSEO />
         <footer
           style={{
             textAlign: "center",
