@@ -978,6 +978,12 @@ export default function NavBar() {
           }}
         >
           <Link
+            href="/guides"
+            className={`nav-privacy-link ${isActive("/guides")}`}
+          >
+            Guides
+          </Link>
+          <Link
             href="/privacy"
             className={`nav-privacy-link ${isActive("/privacy")}`}
           >
