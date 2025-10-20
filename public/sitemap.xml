@@ -141,4 +141,16 @@
   <url><loc>https://www.hashkitly.com/guides</loc><lastmod>2025-10-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.hashkitly.com/guides/generate-md5-checksum</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.hashkitly.com/guides/verify-file-sha256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+
+  <!-- Comparisons -->
+  <url><loc>https://www.hashkitly.com/md5-vs-sha1</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://www.hashkitly.com/sha1-vs-sha256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://www.hashkitly.com/crc32-vs-crc32c</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.hashkitly.com/base64-vs-base64url</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.hashkitly.com/base32-vs-base32hex</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
+  <url><loc>https://www.hashkitly.com/ascii85-vs-base85-rfc1924</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
+  <url><loc>https://www.hashkitly.com/base58-vs-base58check</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.hashkitly.com/uuid-vs-guid</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.hashkitly.com/jwt-hs256-vs-rs256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://www.hashkitly.com/aes-gcm-vs-cbc</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
 </urlset>
