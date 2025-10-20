@@ -1,7 +1,9 @@
 import Client from "./Client";
 export const metadata = {
-  title: "Verhoeff Check — HashKitly",
-  description: "Validate or compute Verhoeff check digit.",
+  title: "Verhoeff Checksum Calculator | Validate/Generate",
+  description:
+    "Validate and compute Verhoeff check digits. In-browser, no upload.",
+  alternates: { canonical: "https://www.hashkitly.com/verhoeff" },
 };
 export default function Page() {
   return <Client />;
