@@ -2,26 +2,26 @@ import type { Metadata } from "next";
 import Pbkdf2Client from "./Client";
 
 export const metadata: Metadata = {
-  title: "PBKDF2 Online Key Derivation | Demo",
+  title: "PBKDF2 Key Derivation Online | Password to Key (SHA-256/SHA-512)",
   description:
-    "Derive keys from passwords with PBKDF2 in your browser. Choose salt, iterations, and hasher.",
+    "Derive cryptographic keys from passwords using PBKDF2. Configure salt, iterations, and hash (SHA-256/SHA-512). Runs in your browser.",
   keywords: "PBKDF2, key derivation, KDF, password hashing",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "PBKDF2 Online Key Derivation | Demo",
+    title: "PBKDF2 Key Derivation Online | Password to Key (SHA-256/SHA-512)",
     description:
-      "Derive keys from passwords with PBKDF2 in your browser. Choose salt, iterations, and hasher.",
+      "Derive cryptographic keys from passwords using PBKDF2. Configure salt, iterations, and hash (SHA-256/SHA-512). Runs in your browser.",
     type: "website",
     url: "https://www.hashkitly.com/pbkdf2",
     images: ["https://www.hashkitly.com/favicon.ico"],
   },
   twitter: {
     card: "summary",
-    title: "PBKDF2 Online Key Derivation | Demo",
+    title: "PBKDF2 Key Derivation Online | Password to Key (SHA-256/SHA-512)",
     description:
-      "Derive keys from passwords with PBKDF2 in your browser. Choose salt, iterations, and hasher.",
+      "Derive cryptographic keys from passwords using PBKDF2. Configure salt, iterations, and hash (SHA-256/SHA-512). Runs in your browser.",
     images: ["https://www.hashkitly.com/favicon.ico"],
   },
   alternates: {

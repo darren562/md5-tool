@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 import Client from "./Client";
 
 export const metadata: Metadata = {
-  title: "ASCII85 Encoder/Decoder — HashKitly",
+  title: "ASCII85 (Base85) Encode/Decode Online | Text Converter",
   description:
-    "ASCII85 (Base85) online: encode/decode UTF-8 text to ASCII85. Works offline in your browser.",
+    "Encode/decode ASCII85 (Base85) in your browser. Free, instant, no upload.",
   openGraph: {
-    title: "ASCII85 Encoder/Decoder — HashKitly",
+    title: "ASCII85 (Base85) Encode/Decode Online | Text Converter",
     description:
-      "ASCII85 (Base85) online: encode/decode UTF-8 text to ASCII85. Works offline in your browser.",
+      "Encode/decode ASCII85 (Base85) in your browser. Free, instant, no upload.",
     url: "https://www.hashkitly.com/ascii85",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ASCII85 Encoder/Decoder — HashKitly",
+    title: "ASCII85 (Base85) Encode/Decode Online | Text Converter",
     description:
-      "ASCII85 (Base85) online: encode/decode UTF-8 text to ASCII85. Works offline in your browser.",
+      "Encode/decode ASCII85 (Base85) in your browser. Free, instant, no upload.",
   },
 };
 

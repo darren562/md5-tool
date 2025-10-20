@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Client from "./Client";
 
 export const metadata: Metadata = {
-  title: "Rail Fence Cipher — HashKitly",
+  title: "Rail Fence (Zigzag) Cipher | Encode/Decode Online",
   description:
-    "Encode/decode Rail Fence (Zigzag) cipher with configurable rails.",
+    "Encode and decode Rail Fence (Zigzag) cipher with configurable rails. In-browser.",
+  alternates: { canonical: "https://www.hashkitly.com/railfence" },
 };
 
 export default function Page() {
