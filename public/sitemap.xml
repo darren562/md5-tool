@@ -143,14 +143,20 @@
   <url><loc>https://www.hashkitly.com/guides/verify-file-sha256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
 
   <!-- Comparisons -->
-  <url><loc>https://www.hashkitly.com/md5-vs-sha1</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
-  <url><loc>https://www.hashkitly.com/sha1-vs-sha256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
-  <url><loc>https://www.hashkitly.com/crc32-vs-crc32c</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.hashkitly.com/base64-vs-base64url</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.hashkitly.com/base32-vs-base32hex</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
-  <url><loc>https://www.hashkitly.com/ascii85-vs-base85-rfc1924</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
-  <url><loc>https://www.hashkitly.com/base58-vs-base58check</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.hashkitly.com/uuid-vs-guid</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.hashkitly.com/jwt-hs256-vs-rs256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
-  <url><loc>https://www.hashkitly.com/aes-gcm-vs-cbc</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/md5-vs-sha1</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/sha1-vs-sha256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/crc32-vs-crc32c</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/base64-vs-base64url</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/base32-vs-base32hex</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/ascii85-vs-base85-rfc1924</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/base58-vs-base58check</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/uuid-vs-guid</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/jwt-hs256-vs-rs256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+   <url><loc>https://www.hashkitly.com/guides/aes-gcm-vs-cbc</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://www.hashkitly.com/guides/aes-gcm-vs-ctr</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.hashkitly.com/guides/hmac-sha256-vs-sha256</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.hashkitly.com/guides/sha256-vs-sha3</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://www.hashkitly.com/guides/pbkdf2-vs-hkdf</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.hashkitly.com/guides/crc16-ibm-vs-crc16-modbus</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
+  <url><loc>https://www.hashkitly.com/guides/base16-vs-hex</loc><lastmod>2025-10-21</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
 </urlset>

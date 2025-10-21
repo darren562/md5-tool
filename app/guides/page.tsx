@@ -26,19 +26,30 @@ export default function Page() {
     { href: "/guides/verify-file-sha256", title: "Verify file SHA-256" },
   ];
   const comparisons = [
-    { href: "/md5-vs-sha1", title: "MD5 vs SHA-1" },
-    { href: "/sha1-vs-sha256", title: "SHA-1 vs SHA-256" },
-    { href: "/crc32-vs-crc32c", title: "CRC32 vs CRC32C" },
-    { href: "/base64-vs-base64url", title: "Base64 vs Base64URL" },
-    { href: "/base32-vs-base32hex", title: "Base32 vs Base32hex" },
+    { href: "/guides/md5-vs-sha1", title: "MD5 vs SHA-1" },
+    { href: "/guides/sha1-vs-sha256", title: "SHA-1 vs SHA-256" },
+    { href: "/guides/md5-vs-sha256", title: "MD5 vs SHA-256" },
+    { href: "/guides/crc32-vs-crc32c", title: "CRC32 vs CRC32C" },
+    { href: "/guides/base64-vs-base64url", title: "Base64 vs Base64URL" },
+    { href: "/guides/base32-vs-base32hex", title: "Base32 vs Base32hex" },
     {
-      href: "/ascii85-vs-base85-rfc1924",
+      href: "/guides/ascii85-vs-base85-rfc1924",
       title: "ASCII85 vs Base85 (RFC 1924)",
     },
-    { href: "/base58-vs-base58check", title: "Base58 vs Base58Check" },
-    { href: "/uuid-vs-guid", title: "UUID vs GUID" },
-    { href: "/jwt-hs256-vs-rs256", title: "JWT HS256 vs RS256" },
-    { href: "/aes-gcm-vs-cbc", title: "AES-GCM vs CBC" },
+    { href: "/guides/base58-vs-base58check", title: "Base58 vs Base58Check" },
+    { href: "/guides/uuid-vs-guid", title: "UUID vs GUID" },
+    { href: "/guides/uuidv4-vs-uuidv7", title: "UUIDv4 vs UUIDv7" },
+    { href: "/guides/jwt-hs256-vs-rs256", title: "JWT HS256 vs RS256" },
+    { href: "/guides/aes-gcm-vs-cbc", title: "AES-GCM vs CBC" },
+    { href: "/guides/aes-gcm-vs-ctr", title: "AES-GCM vs CTR" },
+    { href: "/guides/hmac-sha256-vs-sha256", title: "HMAC-SHA256 vs SHA-256" },
+    { href: "/guides/sha256-vs-sha3", title: "SHA-256 vs SHA-3" },
+    { href: "/guides/pbkdf2-vs-hkdf", title: "PBKDF2 vs HKDF" },
+    {
+      href: "/guides/crc16-ibm-vs-crc16-modbus",
+      title: "CRC16-IBM vs CRC16-MODBUS",
+    },
+    { href: "/guides/base16-vs-hex", title: "Base16 vs Hex" },
   ];
   return (
     <div className="container">
